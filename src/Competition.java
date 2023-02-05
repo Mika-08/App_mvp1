@@ -207,20 +207,10 @@ public class Competition {
         }
     }
 
-    /**
-     * Make an ordered list based in the chosen attempts
-     * @param round current round in the competition
-     * @return ordered list with athletes
-     */
 
     /*
-    public static ArrayList<Athlete> makeOrderListSnatch(int round){
-        ArrayList<Athlete> order = athleteList.stream().
-            sorted(Athlete::getAttemptListSnatch, MyKey::getKey).toList();
-        return order;
-    }
 
-     */
+
 
 
     /**
