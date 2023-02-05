@@ -1,0 +1,27 @@
+First minimal viable product
+Command line based application
+
+Implements the following methods:
+- Make new athlete
+- Make new competition (there is only one competition in the program)
+- Insert attempts
+- Attempt failed/passed
+- Get athlete
+
+How to store the attempts?
+In the athlete class of the competition class?
+
+for each athlete, for 2 lifts for x attempts, set attempts amount, then set completed/failed, and if completed,
+update max.
+
+How to implement the teen section? Implicit reference to gender for sinclair total?
+
+Optimize the duplicate code in the snatch and clean and jerk methods
+
+Create timer with countdown in a separate tread
+
+
+
+
+
+
