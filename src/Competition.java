@@ -207,9 +207,11 @@ public class Competition {
         }
     }
 
-
-    /*
-
+    public static ArrayList<Athlete> makeOrderListSnatch(int round){
+        ArrayList<Athlete> order = athleteList.stream().
+            sorted(Athlete :: getAttemptListSnatch, );
+        return order;
+    }
 
 
 
