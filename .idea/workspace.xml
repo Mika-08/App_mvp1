@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8195f457-6257-4443-a552-5f9b6d63f904" name="Changes" comment="Version 1">
+    <list default="true" id="8195f457-6257-4443-a552-5f9b6d63f904" name="Changes" comment="&#10;">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Attempt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AttemptExecutions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AttemptTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App mvp1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/App mvp1.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Athlete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Athlete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AthleteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AthleteTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Competition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Competition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CompetitionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CompetitionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lift.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LiftTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiftTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyKey.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MyKeyTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +43,19 @@
         <option name="title" value="All" />
       </GitPushTagMode>
     </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="branchProtectionPatterns">
+      <list>
+        <option value="main" />
+      </list>
+    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/Athlete.java" root0="FORCE_HIGHLIGHTING" />
@@ -39,7 +64,6 @@
     <setting file="file://$PROJECT_DIR$/src/League.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Lift.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Main.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/MyKey.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/README" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -73,7 +97,17 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.AthleteTest.calculateSinclair">
+    <configuration name="AthleteTest.calculateSinclair" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="App mvp1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AthleteTest" />
+      <option name="METHOD_NAME" value="calculateSinclair" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AthleteTest.updateHighestScoreCleanAndJerk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="App mvp1" />
       <option name="PACKAGE_NAME" value="" />
@@ -89,16 +123,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AthleteTest" />
       <option name="METHOD_NAME" value="updateHighestScoreSnatch" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AthleteTest.validationCleanAndJerk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="App mvp1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AthleteTest" />
-      <option name="METHOD_NAME" value="validationCleanAndJerk" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -126,11 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AthleteTest.calculateSinclair" />
         <item itemvalue="JUnit.CompetitionTest.checkAttemptListSnatchTrue" />
         <item itemvalue="JUnit.CompetitionTest.checkAttemptListSnatchFalse" />
         <item itemvalue="JUnit.AthleteTest.updateHighestScoreCleanAndJerk" />
         <item itemvalue="JUnit.AthleteTest.updateHighestScoreSnatch" />
-        <item itemvalue="JUnit.AthleteTest.validationCleanAndJerk" />
       </list>
     </recent_temporary>
   </component>
@@ -150,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675628927076</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Make order method update">
+      <created>1675630823785</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675630823785</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -166,6 +197,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Version 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 1" />
+    <MESSAGE value="Make order method update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Make order method update" />
   </component>
 </project>

@@ -1,21 +1,23 @@
 import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
 
 public class Competition {
     private static String name;
-    private static ArrayList<Athlete> athleteList = new ArrayList<>();
-    private static ArrayList<Athlete> leaderboardMale = new ArrayList<>();
-    private static ArrayList<Athlete> leaderboardFemale = new ArrayList<>();
-    private static ArrayList<Athlete> leaderboardTeen = new ArrayList<>();
-    private static ArrayList<Lift> liftList = new ArrayList<>();
+    private static List<Athlete> athleteList = new ArrayList<>();
+    private static List<Athlete> leaderboardMale = new ArrayList<>();
+    private static List<Athlete> leaderboardFemale = new ArrayList<>();
+    private static List<Athlete> leaderboardTeen = new ArrayList<>();
+    private static List<Lift> liftList = new ArrayList<>();
     private static int snatchAttempts = 0;
     private static int cleanAndJerkAttempts = 0;
 
     /**
      * Make new competition
      */
-    public static void makeCompetition(){
+    public static void makeCompetition() {
         Scanner competitionInfo = new Scanner(System.in);
         System.out.println("Insert competition name: \n");
         name = competitionInfo.nextLine();
@@ -41,7 +43,7 @@ public class Competition {
      * May only be called after the creation of a new competition
      */
 
-    public static void addAthleteTotal(){
+    public static void addAthleteTotal() {
         Scanner athleteInfo = new Scanner(System.in);
         System.out.println("Insert athlete name: \n");
         String name = athleteInfo.nextLine();
@@ -49,25 +51,23 @@ public class Competition {
 
         System.out.println("Insert the weight of the athlete: \n");
         double weight = athleteInfo.nextDouble();
-        System.out.println("The weight of the athlete is set to "+ weight + ".");
+        System.out.println("The weight of the athlete is set to " + weight + ".");
 
         System.out.println("""
-            Choose league
-            1 - Male
-            2 - Female
-            3 - Teen
-            """);
+                Choose league
+                1 - Male
+                2 - Female
+                3 - Teen
+                """);
 
         Enum<League> league;
         int leagueOption = athleteInfo.nextInt();
 
-        if (leagueOption == 1){
+        if (leagueOption == 1) {
             league = League.MALE;
-        }
-        else if (leagueOption == 2){
+        } else if (leagueOption == 2) {
             league = League.FEMALE;
-        }
-        else {
+        } else {
             league = League.TEEN;
         }
 
@@ -79,8 +79,8 @@ public class Competition {
     /**
      * Print the list of athletes.
      */
-    public static void printAthleteList(){
-        if (athleteList.size() == 0){
+    public static void printAthleteList() {
+        if (athleteList.size() == 0) {
             System.out.println("There are no athletes registered yet.");
         }
 
@@ -92,7 +92,7 @@ public class Competition {
     /**
      * Make new lift
      */
-    public static void makeNewLift(){
+    public static void makeNewLift() {
         Scanner amountScanner = new Scanner(System.in);
         System.out.println("Amount of snatch attempts allowed: \n");
         int snatchAmount = amountScanner.nextInt();
@@ -110,28 +110,28 @@ public class Competition {
         liftList.add(cleanAndJerk);
 
         System.out.println("You made a new competition with " + snatchAmount +
-            " attempts for the snatch and " + cleanAndJerkAmount +
-            " attempts for the clean and jerk.");
+                " attempts for the snatch and " + cleanAndJerkAmount +
+                " attempts for the clean and jerk.");
     }
 
     /**
      * Chance an attribute from an athlete
      */
-    public static void changeAthleteAttribute(){
+    public static void changeAthleteAttribute() {
         System.out.println("Choose athlete to change the attribute of: \n");
-        for (int i = 0; i < athleteList.size(); i++){
-            System.out.println(i+1 + " - " + athleteList.get(i).getName());
+        for (int i = 0; i < athleteList.size(); i++) {
+            System.out.println(i + 1 + " - " + athleteList.get(i).getName());
         }
 
         Scanner athleteScanner = new Scanner(System.in);
         int index = athleteScanner.nextInt();
 
         System.out.println("""
-            Choose attribute to change:
-            1 - Name
-            2 - Weight
-            3 - league
-            """);
+                Choose attribute to change:
+                1 - Name
+                2 - Weight
+                3 - league
+                """);
 
         int choice = athleteScanner.nextInt();
 
@@ -150,11 +150,11 @@ public class Competition {
             }
             case 3 -> {
                 System.out.println("""
-                    Choose league
-                    1 - Male
-                    2 - Female
-                    3 - Teen
-                    """);
+                        Choose league
+                        1 - Male
+                        2 - Female
+                        3 - Teen
+                        """);
                 int leagueOption = athleteScanner.nextInt();
                 if (leagueOption == 1) {
                     athleteList.get(index - 1).setLeague(League.MALE);
@@ -171,16 +171,16 @@ public class Competition {
     /**
      * Delete an athlete from the list
      */
-    public static void deleteAthleteRegistration(){
+    public static void deleteAthleteRegistration() {
         System.out.println("Choose athlete to remove: \n");
-        for (int i = 0; i < athleteList.size(); i++){
-            System.out.println(i+1 + " - " + athleteList.get(i).getName());
+        for (int i = 0; i < athleteList.size(); i++) {
+            System.out.println(i + 1 + " - " + athleteList.get(i).getName());
         }
 
         Scanner athleteScanner = new Scanner(System.in);
         int index = athleteScanner.nextInt();
         System.out.println("Athlete " + athleteList.get(index - 1).getName() +
-            " is deleted from the list. ");
+                " is deleted from the list. ");
 
         athleteList.remove(athleteList.get(index - 1));
     }
@@ -188,13 +188,12 @@ public class Competition {
     /**
      * Start competition method
      * Initialize leaderboards
-     *
      */
 
-    public static void startCompetition(){
+    public static void startCompetition() {
 
         // Initialize leaderboards
-        for (Lift lift: liftList) {
+        for (Lift lift : liftList) {
             for (Athlete a : Competition.getAthleteList()) {
                 if (a.getLeague() == League.MALE) {
                     lift.getLeaderboardMale().add(a);
@@ -207,61 +206,63 @@ public class Competition {
         }
     }
 
-    public static ArrayList<Athlete> makeOrderListSnatch(int round){
-        ArrayList<Athlete> order = athleteList.stream().
-            sorted(Athlete :: getAttemptListSnatch, );
-        return order;
+    public static List<Athlete> orderAthletesByHighestSnatchForRound(int round) {
+        return athleteList.stream()
+                .sorted(Comparator.comparing(athlete -> athlete.getSnatchAttempts()
+                    .getSuccessfulExecutionForRound(round)))
+                .collect(Collectors.toList());
     }
-
-
 
     /**
      * Insert new attempt
+     *
      * @param round round
      */
 
-    public static void insertAttemptSnatch(int round){
+    public static void insertAttemptSnatch(int round) {
         Scanner attemptScanner = new Scanner(System.in);
         System.out.println("Choose athlete to set attempt amount of \n");
-        for (int i = 0; i < athleteList.size(); i++){
-            System.out.println(i+1 + " - " + athleteList.get(i).getName());
+        for (int i = 0; i < athleteList.size(); i++) {
+            System.out.println(i + 1 + " - " + athleteList.get(i).getName());
         }
 
         System.out.println("Insert amount: \n");
         double amount = attemptScanner.nextDouble();
 
         int index = attemptScanner.nextInt();
-        getAthleteList().get(index - 1).insertAttemptSnatch(amount, round);
+        getAthleteList().get(index - 1).addSnatchPlannedAttempt(round, amount);
     }
 
     /**
      * Insert new attempt
+     *
      * @param round round
      */
 
-    public static void insertAttemptCleanAndJerk(int round){
+    public static void insertAttemptCleanAndJerk(int round) {
         Scanner attemptScanner = new Scanner(System.in);
         System.out.println("Choose athlete to set attempt amount of \n");
-        for (int i = 0; i < athleteList.size(); i++){
-            System.out.println(i+1 + " - " + athleteList.get(i).getName());
+        for (int i = 0; i < athleteList.size(); i++) {
+            System.out.println(i + 1 + " - " + athleteList.get(i).getName());
         }
 
         System.out.println("Insert amount: \n");
         double amount = attemptScanner.nextDouble();
 
         int index = attemptScanner.nextInt();
-        getAthleteList().get(index - 1).insertAttemptSnatch(amount, round);
+        getAthleteList().get(index - 1).addSnatchPlannedAttempt(round, amount);
     }
 
     /**
      * Check if all attempts are filled in
+     *
      * @param round round to be checked
      * @return true or false
      */
 
-    public static boolean checkAttemptListSnatch(int round){
-        for (Athlete athlete: athleteList){
-            if (athlete.getAttemptListSnatch().get(round) == null){
+    public static boolean checkAttemptListSnatch(int round) {
+        for (Athlete athlete : athleteList) {
+            if (athlete.getSnatchAttempts().getAttemptList().get(round) == null) {
                 return false;
             }
         }
@@ -270,13 +271,14 @@ public class Competition {
 
     /**
      * Check if all attempts are filled in
+     *
      * @param round round to be checked
      * @return true or false
      */
 
-    public static boolean checkAttemptListCleanAndJerk(int round){
-        for (Athlete athlete: athleteList){
-            if (athlete.getAttemptListCleanAndJerk().get(round) == null){
+    public static boolean checkAttemptListCleanAndJerk(int round) {
+        for (Athlete athlete : athleteList) {
+            if (athlete.getCleanAndJerkAttempts().getAttemptList().get(round) == null) {
                 return false;
             }
         }
@@ -284,12 +286,13 @@ public class Competition {
     }
 
 
-    public static void saveToFile(){
+    public static void saveToFile() {
 
     }
 
     /**
      * Get name
+     *
      * @return name
      */
 
@@ -299,51 +302,57 @@ public class Competition {
 
     /**
      * Get athlete list
+     *
      * @return athlete list
      */
 
-    public static ArrayList<Athlete> getAthleteList() {
+    public static List<Athlete> getAthleteList() {
         return athleteList;
     }
 
     /**
      * Get leaderboard male
+     *
      * @return leaderboard male
      */
 
-    public static ArrayList<Athlete> getLeaderboardMale() {
+    public static List<Athlete> getLeaderboardMale() {
         return leaderboardMale;
     }
 
     /**
      * Get leaderboard female
+     *
      * @return leaderboard female
      */
 
-    public static ArrayList<Athlete> getLeaderboardFemale() {
+    public static List<Athlete> getLeaderboardFemale() {
         return leaderboardFemale;
     }
 
     /**
      * Get leaderboard teen
+     *
      * @return leaderboard teen
      */
 
-    public static ArrayList<Athlete> getLeaderboardTeen() {
+    public static List<Athlete> getLeaderboardTeen() {
         return leaderboardTeen;
     }
 
     /**
      * Get list of lifts
+     *
      * @return list of lifts
      */
 
-    public static ArrayList<Lift> getLiftList() {
+    public static List<Lift> getLiftList() {
         return liftList;
     }
 
     /**
      * Get snatch attempts
+     *
      * @return amount of attempts for the snatch
      */
 
@@ -353,6 +362,7 @@ public class Competition {
 
     /**
      * Get clean and jerk attempts
+     *
      * @return amount of attempts for the clean and jerk
      */
 
@@ -362,6 +372,7 @@ public class Competition {
 
     /**
      * Set name
+     *
      * @param name new name
      */
 
@@ -371,6 +382,7 @@ public class Competition {
 
     /**
      * Set athlete list
+     *
      * @param athleteList new list
      */
 

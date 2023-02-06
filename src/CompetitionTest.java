@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -16,8 +17,8 @@ class CompetitionTest {
 
         Competition.setAthleteList(list);
 
-        athlete.insertAttemptSnatch(70, 1);
-        athlete2.insertAttemptSnatch(75, 1);
+        athlete.addSnatchPlannedAttempt(1, 70);
+        athlete2.addSnatchPlannedAttempt(1, 75);
         assertTrue(Competition.checkAttemptListSnatch(1));
         Competition.getAthleteList().clear();
     }
@@ -33,7 +34,7 @@ class CompetitionTest {
 
         Competition.setAthleteList(list);
 
-        athlete2.insertAttemptSnatch(75, 1);
+        athlete2.addSnatchPlannedAttempt(1, 75);
         assertFalse(Competition.checkAttemptListSnatch(1));
         Competition.getAthleteList().clear();
     }
@@ -51,8 +52,8 @@ class CompetitionTest {
 
         Competition.setAthleteList(list);
 
-        athlete.insertAttemptSnatch(80, 1);
-        athlete2.insertAttemptSnatch(75, 1);
+        athlete.addSnatchPlannedAttempt(1, 80);
+        athlete2.addSnatchPlannedAttempt(1, 75);
         athlete3.initializeAttemptList(90, 1);
 
         /*
@@ -70,7 +71,7 @@ class CompetitionTest {
         testOutput.add(athlete3);
 
         // Calculated order
-        ArrayList<Athlete> order = Competition.makeOrderListSnatch(1);
+        List<Athlete> order = Competition.orderAthletesByHighestSnatchForRound(1);
 
         assertEquals(testOutput, order);
         Competition.getAthleteList().clear();
