@@ -1,0 +1,1686 @@
+Index: .idea/compiler.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/compiler.xml b/.idea/compiler.xml
+new file mode 100644
+--- /dev/null	(revision 9e05f53acca87d1ef486b05b2f67dcf65dca747f)
++++ b/.idea/compiler.xml	(revision 9e05f53acca87d1ef486b05b2f67dcf65dca747f)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="CompilerConfiguration">
++    <annotationProcessing>
++      <profile default="true" name="Default" enabled="true" />
++    </annotationProcessing>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/uiDesigner.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/uiDesigner.xml b/.idea/uiDesigner.xml
+new file mode 100644
+--- /dev/null	(revision 9e05f53acca87d1ef486b05b2f67dcf65dca747f)
++++ b/.idea/uiDesigner.xml	(revision 9e05f53acca87d1ef486b05b2f67dcf65dca747f)
+@@ -0,0 +1,124 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Palette2">
++    <group name="Swing">
++      <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1" />
++      </item>
++      <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2" />
++      </item>
++      <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.svg" removable="false" auto-create-binding="false" can-attach-label="true">
++        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1" />
++        <initial-values>
++          <property name="text" value="Button" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="RadioButton" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="CheckBox" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="Label" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="2" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
++          <preferred-size width="200" height="200" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
++          <preferred-size width="200" height="200" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.svg" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JSeparator" icon="/com/intellij/uiDesigner/icons/separator.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JProgressBar" icon="/com/intellij/uiDesigner/icons/progressbar.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
++      </item>
++      <item class="javax.swing.JToolBar" icon="/com/intellij/uiDesigner/icons/toolbar.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1">
++          <preferred-size width="-1" height="20" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JToolBar$Separator" icon="/com/intellij/uiDesigner/icons/toolbarSeparator.svg" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1" />
++      </item>
++      <item class="javax.swing.JScrollBar" icon="/com/intellij/uiDesigner/icons/scrollbar.svg" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
++      </item>
++    </group>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 92682e5457c53f21f8393a1fe5114c86aa968021)
++++ b/.idea/workspace.xml	(revision 9e05f53acca87d1ef486b05b2f67dcf65dca747f)
+@@ -2,8 +2,19 @@
+ <project version="4">
+   <component name="ChangeListManager">
+     <list default="true" id="8195f457-6257-4443-a552-5f9b6d63f904" name="Changes" comment="Version 1">
++      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/AttemptExecutions.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/App mvp1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/App mvp1.iml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Athlete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Athlete.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/AthleteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AthleteTest.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/Competition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Competition.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/CompetitionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CompetitionTest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/Lift.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lift.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/LiftTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LiftTest.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/MyKey.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Attempt.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/MyKeyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AttemptTest.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -14,8 +25,8 @@
+     <option name="RECENT_TEMPLATES">
+       <list>
+         <option value="Enum" />
+-        <option value="Class" />
+         <option value="JUnit5 Test Class" />
++        <option value="Class" />
+       </list>
+     </option>
+   </component>
+@@ -29,42 +40,54 @@
+         <option name="argument" value="--tags" />
+         <option name="title" value="All" />
+       </GitPushTagMode>
++    </option>
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="main" />
++      </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+   <component name="HighlightingSettingsPerFile">
+     <setting file="file://$PROJECT_DIR$/src/Athlete.java" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/src/Attempt.java" root0="FORCE_HIGHLIGHTING" />
+     <setting file="file://$PROJECT_DIR$/src/Competition.java" root0="FORCE_HIGHLIGHTING" />
+     <setting file="file://$PROJECT_DIR$/src/CompetitionTest.java" root0="FORCE_HIGHLIGHTING" />
+     <setting file="file://$PROJECT_DIR$/src/League.java" root0="FORCE_HIGHLIGHTING" />
+     <setting file="file://$PROJECT_DIR$/src/Lift.java" root0="FORCE_HIGHLIGHTING" />
+     <setting file="file://$PROJECT_DIR$/src/Main.java" root0="FORCE_HIGHLIGHTING" />
+-    <setting file="file://$PROJECT_DIR$/src/MyKey.java" root0="FORCE_HIGHLIGHTING" />
+     <setting file="file://$PROJECT_DIR$/src/README" root0="FORCE_HIGHLIGHTING" />
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
+   <component name="ProjectId" id="2L3HvmSOqi7omqki3qQ4nrRBYOr" />
+-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
++    <ConfirmationsSetting value="2" id="Add" />
++  </component>
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+-    &quot;create.test.in.the.same.root&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "Downloaded.Files.Path.Enabled": "false",
++    "Repository.Attach.Annotations": "false",
++    "Repository.Attach.JavaDocs": "false",
++    "Repository.Attach.Sources": "false",
++    "RunOnceActivity.OpenProjectViewOnStart": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "WebServerToolWindowFactoryState": "false",
++    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
++    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
++    "create.test.in.the.same.root": "true",
++    "project.structure.last.edited": "Project",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.0",
++    "settings.editor.selected.configurable": "preferences.lookFeel"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="CreateTestDialog.Recents.Supers">
+       <recent name="" />
+@@ -73,64 +96,63 @@
+       <recent name="" />
+     </key>
+   </component>
+-  <component name="RunManager">
+-    <configuration name="AthleteTest.updateHighestScoreCleanAndJerk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++  <component name="RunManager" selected="JUnit.LiftTest">
++    <configuration name="AthleteTest.calculateSinclair" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="App mvp1" />
+       <option name="PACKAGE_NAME" value="" />
+       <option name="MAIN_CLASS_NAME" value="AthleteTest" />
+-      <option name="METHOD_NAME" value="updateHighestScoreCleanAndJerk" />
++      <option name="METHOD_NAME" value="calculateSinclair" />
+       <option name="TEST_OBJECT" value="method" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="AthleteTest.updateHighestScoreSnatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++    <configuration name="AthleteTest.updateHighestScoreCleanAndJerk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="App mvp1" />
+       <option name="PACKAGE_NAME" value="" />
+       <option name="MAIN_CLASS_NAME" value="AthleteTest" />
+-      <option name="METHOD_NAME" value="updateHighestScoreSnatch" />
++      <option name="METHOD_NAME" value="updateHighestScoreCleanAndJerk" />
+       <option name="TEST_OBJECT" value="method" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="AthleteTest.validationCleanAndJerk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++    <configuration name="CompetitionTest.checkAttemptListSnatchFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="App mvp1" />
+       <option name="PACKAGE_NAME" value="" />
+-      <option name="MAIN_CLASS_NAME" value="AthleteTest" />
+-      <option name="METHOD_NAME" value="validationCleanAndJerk" />
++      <option name="MAIN_CLASS_NAME" value="CompetitionTest" />
++      <option name="METHOD_NAME" value="checkAttemptListSnatchFalse" />
+       <option name="TEST_OBJECT" value="method" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="CompetitionTest.checkAttemptListSnatchFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++    <configuration name="CompetitionTest.checkAttemptListSnatchTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="App mvp1" />
+       <option name="PACKAGE_NAME" value="" />
+       <option name="MAIN_CLASS_NAME" value="CompetitionTest" />
+-      <option name="METHOD_NAME" value="checkAttemptListSnatchFalse" />
++      <option name="METHOD_NAME" value="checkAttemptListSnatchTrue" />
+       <option name="TEST_OBJECT" value="method" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+-    <configuration name="CompetitionTest.checkAttemptListSnatchTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++    <configuration name="LiftTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+       <module name="App mvp1" />
+       <option name="PACKAGE_NAME" value="" />
+-      <option name="MAIN_CLASS_NAME" value="CompetitionTest" />
+-      <option name="METHOD_NAME" value="checkAttemptListSnatchTrue" />
+-      <option name="TEST_OBJECT" value="method" />
++      <option name="MAIN_CLASS_NAME" value="LiftTest" />
++      <option name="TEST_OBJECT" value="class" />
+       <method v="2">
+         <option name="Make" enabled="true" />
+       </method>
+     </configuration>
+     <recent_temporary>
+       <list>
++        <item itemvalue="JUnit.LiftTest" />
++        <item itemvalue="JUnit.AthleteTest.calculateSinclair" />
+         <item itemvalue="JUnit.CompetitionTest.checkAttemptListSnatchTrue" />
+         <item itemvalue="JUnit.CompetitionTest.checkAttemptListSnatchFalse" />
+         <item itemvalue="JUnit.AthleteTest.updateHighestScoreCleanAndJerk" />
+-        <item itemvalue="JUnit.AthleteTest.updateHighestScoreSnatch" />
+-        <item itemvalue="JUnit.AthleteTest.validationCleanAndJerk" />
+       </list>
+     </recent_temporary>
+   </component>
+@@ -142,6 +164,7 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1675093079996</updated>
++      <workItem from="1675673707275" duration="6790000" />
+     </task>
+     <task id="LOCAL-00001" summary="Version 1">
+       <created>1675628927076</created>
+@@ -152,6 +175,9 @@
+     </task>
+     <option name="localTasksCounter" value="2" />
+     <servers />
++  </component>
++  <component name="TypeScriptGeneratedFilesManager">
++    <option name="version" value="3" />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+     <option name="TAB_STATES">
+Index: App mvp1.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/App mvp1.iml b/App mvp1.iml
+--- a/App mvp1.iml	(revision 92682e5457c53f21f8393a1fe5114c86aa968021)
++++ b/App mvp1.iml	(revision 9e05f53acca87d1ef486b05b2f67dcf65dca747f)
+@@ -23,5 +23,14 @@
+         <SOURCES />
+       </library>
+     </orderEntry>
++    <orderEntry type="module-library">
++      <library>
++        <CLASSES>
++          <root url="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.22/lombok-1.18.22.jar!/" />
++        </CLASSES>
++        <JAVADOC />
++        <SOURCES />
++      </library>
++    </orderEntry>
+   </component>
+ </module>
+\ No newline at end of file
+Index: src/Athlete.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Athlete.java b/src/Athlete.java
+--- a/src/Athlete.java	(revision 92682e5457c53f21f8393a1fe5114c86aa968021)
++++ b/src/Athlete.java	(revision 9e05f53acca87d1ef486b05b2f67dcf65dca747f)
+@@ -1,19 +1,12 @@
+-import java.security.KeyStore;
+-import java.util.ArrayList;
+ import java.util.LinkedHashMap;
+-import java.util.Map;
+ 
+ public class Athlete {
+     private String name;
+     private double weight;
+     private Enum<League> league;
+ 
+-    private LinkedHashMap<Integer, MyKey<Double, Integer>>
+-        attemptListSnatch = new LinkedHashMap<>();
+-    private LinkedHashMap<Integer, MyKey<Double, Integer>>
+-        attemptListCleanAndJerk = new LinkedHashMap<>();
+-    private double highestScoreSnatch = 0;
+-    private double highestScoreCleanAndJerk = 0;
++    private AttemptExecutions snatchAttempts = new AttemptExecutions();
++    private AttemptExecutions cleanAndJerkAttempts = new AttemptExecutions();
+ 
+     /**
+      * Constructor for a new athlete
+@@ -30,70 +23,61 @@
+ 
+     /**
+      * Based on the amount of attempts provided, make new linkedHashmaps
+-     * @param snatchAmount amount of snatches
+-     * @param cleanAndJerkAmount amount of clean and jerks
++     * @param totalSnatchRounds amount of snatches
++     * @param totalCleanAndJerkRounds amount of clean and jerks
+      */
+ 
+-    public void initializeAttemptList(int snatchAmount, int cleanAndJerkAmount){
+-        for (int i = 0; i < snatchAmount; i++){
+-            attemptListSnatch.put(i+1 , new MyKey<Double, Integer>(0,0));
+-        }
++    public void initializeAttemptList(int totalSnatchRounds, int totalCleanAndJerkRounds) {
++        initialize(totalSnatchRounds, snatchAttempts);
++        initialize(totalCleanAndJerkRounds, cleanAndJerkAttempts);
++    }
+ 
+-        for (int j = 0; j < cleanAndJerkAmount; j++){
+-            attemptListCleanAndJerk.put(j+1 , new MyKey<Double, Integer>(0,0));
++    private void initialize(int totalRounds, AttemptExecutions executions) {
++        for (int i = 0; i < totalRounds; i++) {
++            executions.addPlan(i + 1, 0.0);
+         }
+     }
+ 
+     /**
+      * Insert new attempt amount for snatch
+-     * @param attempt amount
+-     * @param round round in which it needs to be inserted
++     *
++     * @param round   round in which it needs to be inserted
++     * @param weight amount
+      */
+ 
+-    public void insertAttemptSnatch(double attempt, int round){
+-        MyKey<Double, Integer> newAttempt = new MyKey<>(attempt, 0);
+-        attemptListSnatch.put(round, newAttempt);
++    public void addSnatchPlannedAttempt(int round, double weight) {
++        snatchAttempts.addPlan(round, weight);
+     }
+ 
+ 
+     /**
+      * Inset new attempts amount for clean and jerk
+-     * @param attempt amount
+-     * @param round round in which it needs to be inserted
++     *
++     * @param round   round in which it needs to be inserted
++     * @param weight amount
+      */
+-    public void insertAttemptCleanAndJerk(double attempt, int round){
+-        MyKey<Double, Integer> newAttempt = new MyKey<>(attempt, 0);
+-        attemptListCleanAndJerk.put(round, newAttempt);
++    public void addCleanAndJerkPlannedAttempt(int round, double weight) {
++        cleanAndJerkAttempts.addPlan(round, weight);
+     }
+ 
+     /**
+      * Validate score
+      * @param round round in which the score needs to be validated
+-     * @param validation fail or pass
++     * @param isSuccessful fail or pass
+      */
+ 
+-    public void validateScoreSnatch(int round, boolean validation){
+-        if (validation){
+-            MyKey<Double, Integer> oldNode = attemptListSnatch.get(round);
+-            oldNode.setValue(1);
+-            attemptListSnatch.put(round, oldNode);
+-            highestScoreSnatch = (double) oldNode.getKey();
+-        }
++    public void validateSnatchExecution(int round, boolean isSuccessful) {
++        snatchAttempts.validateExecution(round, isSuccessful);
+     }
+ 
+     /**
+      * Validate score
+      * @param round round in which the score needs to be validated
+-     * @param validation fail or pass
++     * @param isSuccessful fail or pass
+      */
+ 
+-    public void validateScoreCleanAndJerk(int round, boolean validation){
+-        if (validation){
+-            MyKey<Double, Integer> oldNode = attemptListCleanAndJerk.get(round);
+-            oldNode.setValue(1);
+-            attemptListCleanAndJerk.put(round, oldNode);
+-            highestScoreCleanAndJerk = (double) oldNode.getKey();
+-        }
++    public void validateCleanAndJerkExecution(int round, boolean isSuccessful) {
++        cleanAndJerkAttempts.validateExecution(round, isSuccessful);
+     }
+ 
+ 
+@@ -103,7 +87,7 @@
+      */
+ 
+     public double calculateSinclair(){
+-        double totalWeight = highestScoreSnatch + highestScoreCleanAndJerk;
++        double totalWeight = snatchAttempts.getHighestScore() + cleanAndJerkAttempts.getHighestScore();
+         double womenCoefficientA = 0.783497476;
+         double menCoefficientA = 0.751945030;
+         double womenCoefficientB = 153.655;
+@@ -151,8 +135,8 @@
+      * @return list
+      */
+ 
+-    public LinkedHashMap<Integer, MyKey<Double, Integer>> getAttemptListSnatch() {
+-        return attemptListSnatch;
++    public AttemptExecutions getSnatchAttempts() {
++        return snatchAttempts;
+     }
+ 
+     /**
+@@ -160,8 +144,8 @@
+      *
+      * @return list
+      */
+-    public LinkedHashMap<Integer, MyKey<Double, Integer>> getAttemptListCleanAndJerk() {
+-        return attemptListCleanAndJerk;
++    public AttemptExecutions getCleanAndJerkAttempts() {
++        return cleanAndJerkAttempts;
+     }
+ 
+     /**
+@@ -178,7 +162,7 @@
+      * @return highest score
+      */
+     public double getHighestScoreSnatch() {
+-        return highestScoreSnatch;
++        return snatchAttempts.getHighestScore();
+     }
+ 
+     /**
+@@ -187,7 +171,7 @@
+      */
+ 
+     public double getHighestScoreCleanAndJerk() {
+-        return highestScoreCleanAndJerk;
++        return snatchAttempts.getHighestScore();
+     }
+ 
+     /**
+@@ -208,41 +192,6 @@
+ 
+     // TODO: Make these be changeable separately
+ 
+-    /**
+-     * Set failAchieveSnatch
+-     * @param attemptListSnatch new list
+-     */
+-    public void setAttemptListSnatch(LinkedHashMap<Integer, MyKey<Double, Integer>> attemptListSnatch) {
+-        this.attemptListSnatch = attemptListSnatch;
+-    }
+-
+-    /**
+-     * Set failAchieveCleanAndJerk
+-     * @param attemptListCleanAndJerk new list
+-     */
+-
+-    public void setAttemptListCleanAndJerk(LinkedHashMap<Integer, MyKey<Double, Integer>> attemptListCleanAndJerk) {
+-        this.attemptListCleanAndJerk = attemptListCleanAndJerk;
+-    }
+-
+-
+-    /**
+-     * Set highest score snatch
+-     * @param highestScoreSnatch new highest score
+-     */
+-    public void setHighestScoreSnatch(double highestScoreSnatch) {
+-        this.highestScoreSnatch = highestScoreSnatch;
+-    }
+-
+-    /**
+-     * Set highest score clean and jerk
+-     * @param highestScoreCleanAndJerk new highest score
+-     */
+-
+-    public void setHighestScoreCleanAndJerk(double highestScoreCleanAndJerk) {
+-        this.highestScoreCleanAndJerk = highestScoreCleanAndJerk;
+-    }
+-
+     /**
+      * Set league
+      * @param league league
+@@ -262,7 +211,7 @@
+     public String toString() {
+         return "Name athlete: " + name +" (" + league + ") \n" +
+             "Weight of the athlete: " + weight + " kg. \n" +
+-            "Highest score snatch: " + getHighestScoreSnatch() + ".\n" +
+-            "Highest score Clean and Jerk: " + getHighestScoreCleanAndJerk() + ".\n\n";
++            "Highest score snatch: " + snatchAttempts.getHighestScore() + ".\n" +
++            "Highest score Clean and Jerk: " + cleanAndJerkAttempts.getHighestScore() + ".\n\n";
+     }
+ }
+Index: src/AthleteTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/AthleteTest.java b/src/AthleteTest.java
+--- a/src/AthleteTest.java	(revision 92682e5457c53f21f8393a1fe5114c86aa968021)
++++ b/src/AthleteTest.java	(revision 9e05f53acca87d1ef486b05b2f67dcf65dca747f)
+@@ -9,124 +9,124 @@
+     @org.junit.jupiter.api.Test
+     void calculateSinclair() {
+         Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
+-        athlete.setHighestScoreSnatch(43);
+-        athlete.setHighestScoreCleanAndJerk(63);
+-
+-        assertEquals(153.50601950249748, athlete.calculateSinclair());
+-    }
+-
+-    @Test
+-    void initialiseAttemptListSnatch(){
+-        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
+-        athlete.initializeAttemptList(3,3);
+-
+-        LinkedHashMap<Integer, MyKey> test = new LinkedHashMap<Integer, MyKey>();
+-        test.put(1, new MyKey<>(0,0));
+-        test.put(2, new MyKey<>(0,0));
+-        test.put(3, new MyKey<>(0,0));
+-
+-        assertEquals(test.toString(), athlete.getAttemptListSnatch().toString());
+-    }
+-
+-    @Test
+-    void updateAttemptListSnatch(){
+-        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
+-        athlete.initializeAttemptList(3,3);
+-
+-        athlete.insertAttemptSnatch(60,1);
+-
+-        LinkedHashMap<Integer, MyKey> test = new LinkedHashMap<Integer, MyKey>();
+-        test.put(1, new MyKey<>(60,0));
+-        test.put(2, new MyKey<>(0,0));
+-        test.put(3, new MyKey<>(0,0));
++        athlete.getSnatchAttempts().setHighestScore(43);
++        athlete.getCleanAndJerkAttempts().setHighestScore(63);
+ 
+-        assertEquals(test.toString(), athlete.getAttemptListSnatch().toString());
++        assertEquals(150.6633154376364, athlete.calculateSinclair());
+     }
+ 
+-    @Test
+-    void initialiseAttemptListCleanAndJerk(){
+-        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
+-        athlete.initializeAttemptList(3,3);
+-
+-        LinkedHashMap<Integer, MyKey<Double, Integer>> test =
+-            new LinkedHashMap<Integer, MyKey<Double, Integer>>();
+-        test.put(1, new MyKey<>(0,0));
+-        test.put(2, new MyKey<>(0,0));
+-        test.put(3, new MyKey<>(0,0));
+-
+-        assertEquals(test.toString(), athlete.getAttemptListCleanAndJerk().toString());
+-    }
+-
+-    @Test
+-    void updateAttemptListCleanAndJerk(){
+-        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
+-        athlete.initializeAttemptList(3,3);
+-
+-        athlete.insertAttemptCleanAndJerk(60,1);
+-
+-        LinkedHashMap<Integer, MyKey<Double, Integer>> test =
+-            new LinkedHashMap<Integer, MyKey<Double, Integer>>();
+-        test.put(1, new MyKey<>(60,0));
+-        test.put(2, new MyKey<>(0,0));
+-        test.put(3, new MyKey<>(0,0));
+-
+-        assertEquals(test.toString(), athlete.getAttemptListCleanAndJerk().toString());
+-    }
+-
+-    @Test
+-    void validationSnatch(){
+-        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
+-        athlete.initializeAttemptList(3,3);
+-
+-        athlete.insertAttemptSnatch(60,1);
+-        athlete.validateScoreSnatch(1, true);
+-
+-        LinkedHashMap<Integer, MyKey<Double, Integer>> test =
+-            new LinkedHashMap<Integer, MyKey<Double, Integer>>();
+-        test.put(1, new MyKey<>(60,1));
+-        test.put(2, new MyKey<>(0,0));
+-        test.put(3, new MyKey<>(0,0));
+-
+-        assertEquals(test.toString(), athlete.getAttemptListSnatch().toString());
+-    }
+-
+-    @Test
+-    void validationCleanAndJerk(){
+-        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
+-        athlete.initializeAttemptList(3,3);
+-
+-        athlete.insertAttemptCleanAndJerk(60,1);
+-        athlete.validateScoreCleanAndJerk(1, true);
+-
+-        LinkedHashMap<Integer, MyKey<Double, Integer>> test =
+-            new LinkedHashMap<Integer, MyKey<Double, Integer>>();
+-        test.put(1, new MyKey<>(60,1));
+-        test.put(2, new MyKey<>(0,0));
+-        test.put(3, new MyKey<>(0,0));
+-
+-        assertEquals(test.toString(), athlete.getAttemptListCleanAndJerk().toString());
+-    }
+-
+-    @Test
+-    void updateHighestScoreSnatch(){
+-        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
+-        athlete.initializeAttemptList(3,3);
+-
+-        athlete.insertAttemptSnatch(60,1);
+-        athlete.validateScoreSnatch(1, true);
+-        assertEquals(60, athlete.getHighestScoreSnatch());
+-
+-    }
+-
+-    @Test
+-    void updateHighestScoreCleanAndJerk(){
+-        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
+-        athlete.initializeAttemptList(3,3);
+-
+-        athlete.insertAttemptCleanAndJerk(60,1);
+-        athlete.validateScoreCleanAndJerk(1, true);
+-        assertEquals(60, athlete.getHighestScoreCleanAndJerk());
+-
+-    }
++//    @Test
++//    void initialiseAttemptListSnatch(){
++//        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
++//        athlete.initializeAttemptList(3,3);
++//
++//        LinkedHashMap<Integer, Attempt> test = new LinkedHashMap<Integer, Attempt>();
++//        test.put(1, new Attempt<>(0,0));
++//        test.put(2, new Attempt<>(0,0));
++//        test.put(3, new Attempt<>(0,0));
++//
++//        assertEquals(test.toString(), athlete.getSnatchAttempts().toString());
++//    }
++//
++//    @Test
++//    void updateAttemptListSnatch(){
++//        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
++//        athlete.initializeAttemptList(3,3);
++//
++//        athlete.addSnatchPlannedAttempt(1, 60);
++//
++//        LinkedHashMap<Integer, Attempt> test = new LinkedHashMap<Integer, Attempt>();
++//        test.put(1, new Attempt<>(60,0));
++//        test.put(2, new Attempt<>(0,0));
++//        test.put(3, new Attempt<>(0,0));
++//
++//        assertEquals(test.toString(), athlete.getSnatchAttempts().toString());
++//    }
++//
++//    @Test
++//    void initialiseAttemptListCleanAndJerk(){
++//        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
++//        athlete.initializeAttemptList(3,3);
++//
++//        LinkedHashMap<Integer, Attempt<Double, Integer>> test =
++//            new LinkedHashMap<Integer, Attempt<Double, Integer>>();
++//        test.put(1, new Attempt<>(0,0));
++//        test.put(2, new Attempt<>(0,0));
++//        test.put(3, new Attempt<>(0,0));
++//
++//        assertEquals(test.toString(), athlete.getCleanAndJerkAttempts().toString());
++//    }
++//
++//    @Test
++//    void updateAttemptListCleanAndJerk(){
++//        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
++//        athlete.initializeAttemptList(3,3);
++//
++//        athlete.addCleanAndJerkPlannedAttempt(1, 60);
++//
++//        LinkedHashMap<Integer, Attempt<Double, Integer>> test =
++//            new LinkedHashMap<Integer, Attempt<Double, Integer>>();
++//        test.put(1, new Attempt<>(60,0));
++//        test.put(2, new Attempt<>(0,0));
++//        test.put(3, new Attempt<>(0,0));
++//
++//        assertEquals(test.toString(), athlete.getCleanAndJerkAttempts().toString());
++//    }
++//
++//    @Test
++//    void validationSnatch(){
++//        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
++//        athlete.initializeAttemptList(3,3);
++//
++//        athlete.addSnatchPlannedAttempt(1, 60);
++//        athlete.validateSnatchExecution(1, true);
++//
++//        LinkedHashMap<Integer, Attempt<Double, Integer>> test =
++//            new LinkedHashMap<Integer, Attempt<Double, Integer>>();
++//        test.put(1, new Attempt<>(60,1));
++//        test.put(2, new Attempt<>(0,0));
++//        test.put(3, new Attempt<>(0,0));
++//
++//        assertEquals(test.toString(), athlete.getSnatchAttempts().toString());
++//    }
++//
++//    @Test
++//    void validationCleanAndJerk(){
++//        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
++//        athlete.initializeAttemptList(3,3);
++//
++//        athlete.addCleanAndJerkPlannedAttempt(1, 60);
++//        athlete.validateCleanAndJerkExecution(1, true);
++//
++//        LinkedHashMap<Integer, Attempt<Double, Integer>> test =
++//            new LinkedHashMap<Integer, Attempt<Double, Integer>>();
++//        test.put(1, new Attempt<>(60,1));
++//        test.put(2, new Attempt<>(0,0));
++//        test.put(3, new Attempt<>(0,0));
++//
++//        assertEquals(test.toString(), athlete.getCleanAndJerkAttempts().toString());
++//    }
++//
++//    @Test
++//    void updateHighestScoreSnatch(){
++//        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
++//        athlete.initializeAttemptList(3,3);
++//
++//        athlete.addSnatchPlannedAttempt(1, 60);
++//        athlete.validateSnatchExecution(1, true);
++//        assertEquals(60, athlete.getHighestScoreSnatch());
++//
++//    }
++//
++//    @Test
++//    void updateHighestScoreCleanAndJerk(){
++//        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
++//        athlete.initializeAttemptList(3,3);
++//
++//        athlete.addCleanAndJerkPlannedAttempt(1, 60);
++//        athlete.validateCleanAndJerkExecution(1, true);
++//        assertEquals(60, athlete.getHighestScoreCleanAndJerk());
++//
++//    }
+ 
+ }
+\ No newline at end of file
+Index: src/Attempt.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Attempt.java b/src/Attempt.java
+new file mode 100644
+--- /dev/null	(revision 9e05f53acca87d1ef486b05b2f67dcf65dca747f)
++++ b/src/Attempt.java	(revision 9e05f53acca87d1ef486b05b2f67dcf65dca747f)
+@@ -0,0 +1,13 @@
++import jdk.jfr.DataAmount;
++import lombok.AllArgsConstructor;
++import lombok.Data;
++
++import java.util.Map;
++
++@Data
++@AllArgsConstructor
++public class Attempt {
++    private final int round;
++    private final double weight;
++    private Boolean isSuccessful;
++}
+Index: src/AttemptExecutions.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/AttemptExecutions.java b/src/AttemptExecutions.java
+new file mode 100644
+--- /dev/null	(revision 9e05f53acca87d1ef486b05b2f67dcf65dca747f)
++++ b/src/AttemptExecutions.java	(revision 9e05f53acca87d1ef486b05b2f67dcf65dca747f)
+@@ -0,0 +1,35 @@
++import lombok.Data;
++
++import java.util.LinkedHashMap;
++import java.util.Map;
++
++@Data
++public class AttemptExecutions {
++    Map<Integer, Attempt> attemptList = new LinkedHashMap<>();
++    double highestScore = 0.0;
++
++    public void addPlan(int round, double weight) {
++        attemptList.put(round, new Attempt(round, weight, null));
++    }
++
++    public void validateExecution(int round, boolean isSuccessful) {
++        Attempt attempt = attemptList.computeIfAbsent(round, integer -> {
++            throw new IllegalStateException("No round was planned for '" + round + ";");
++        });
++        attempt.setIsSuccessful(isSuccessful);
++
++        highestScore = isSuccessful && attempt.getWeight() > highestScore
++                ? attempt.getWeight()
++                : highestScore;
++    }
++
++    public double getSuccessfulExecutionForRound(int round) {
++        Attempt attempt = attemptList.computeIfAbsent(round, integer -> {
++            throw new IllegalStateException("No round was planned for '" + round + ";");
++        });
++
++        return Boolean.TRUE.equals(attempt.getIsSuccessful())
++                ? attempt.getWeight() :
++                0.0;
++    }
++}
+Index: src/AttemptTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/AttemptTest.java b/src/AttemptTest.java
+new file mode 100644
+--- /dev/null	(revision 9e05f53acca87d1ef486b05b2f67dcf65dca747f)
++++ b/src/AttemptTest.java	(revision 9e05f53acca87d1ef486b05b2f67dcf65dca747f)
+@@ -0,0 +1,15 @@
++import org.junit.jupiter.api.Test;
++
++import static org.junit.jupiter.api.Assertions.*;
++
++class AttemptTest {
++
++//    @Test
++//    void setValue() {
++//        Attempt<Double, Integer> key = new Attempt<>(60, 0);
++//        key.setValue(1);
++//        Attempt<Double, Integer> test = new Attempt<>(60, 1);
++//
++//        assertEquals(test.toString(), key.toString());
++//    }
++}
+Index: src/Competition.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Competition.java b/src/Competition.java
+--- a/src/Competition.java	(revision 92682e5457c53f21f8393a1fe5114c86aa968021)
++++ b/src/Competition.java	(revision 9e05f53acca87d1ef486b05b2f67dcf65dca747f)
+@@ -1,21 +1,23 @@
+ import java.util.ArrayList;
++import java.util.Comparator;
++import java.util.List;
+ import java.util.Scanner;
+ import java.util.stream.Collectors;
+ 
+ public class Competition {
+     private static String name;
+-    private static ArrayList<Athlete> athleteList = new ArrayList<>();
+-    private static ArrayList<Athlete> leaderboardMale = new ArrayList<>();
+-    private static ArrayList<Athlete> leaderboardFemale = new ArrayList<>();
+-    private static ArrayList<Athlete> leaderboardTeen = new ArrayList<>();
+-    private static ArrayList<Lift> liftList = new ArrayList<>();
++    private static List<Athlete> athleteList = new ArrayList<>();
++    private static List<Athlete> leaderboardMale = new ArrayList<>();
++    private static List<Athlete> leaderboardFemale = new ArrayList<>();
++    private static List<Athlete> leaderboardTeen = new ArrayList<>();
++    private static List<Lift> liftList = new ArrayList<>();
+     private static int snatchAttempts = 0;
+     private static int cleanAndJerkAttempts = 0;
+ 
+     /**
+      * Make new competition
+      */
+-    public static void makeCompetition(){
++    public static void makeCompetition() {
+         Scanner competitionInfo = new Scanner(System.in);
+         System.out.println("Insert competition name: \n");
+         name = competitionInfo.nextLine();
+@@ -41,7 +43,7 @@
+      * May only be called after the creation of a new competition
+      */
+ 
+-    public static void addAthleteTotal(){
++    public static void addAthleteTotal() {
+         Scanner athleteInfo = new Scanner(System.in);
+         System.out.println("Insert athlete name: \n");
+         String name = athleteInfo.nextLine();
+@@ -49,25 +51,23 @@
+ 
+         System.out.println("Insert the weight of the athlete: \n");
+         double weight = athleteInfo.nextDouble();
+-        System.out.println("The weight of the athlete is set to "+ weight + ".");
++        System.out.println("The weight of the athlete is set to " + weight + ".");
+ 
+         System.out.println("""
+-            Choose league
+-            1 - Male
+-            2 - Female
+-            3 - Teen
+-            """);
++                Choose league
++                1 - Male
++                2 - Female
++                3 - Teen
++                """);
+ 
+         Enum<League> league;
+         int leagueOption = athleteInfo.nextInt();
+ 
+-        if (leagueOption == 1){
++        if (leagueOption == 1) {
+             league = League.MALE;
+-        }
+-        else if (leagueOption == 2){
++        } else if (leagueOption == 2) {
+             league = League.FEMALE;
+-        }
+-        else {
++        } else {
+             league = League.TEEN;
+         }
+ 
+@@ -79,8 +79,8 @@
+     /**
+      * Print the list of athletes.
+      */
+-    public static void printAthleteList(){
+-        if (athleteList.size() == 0){
++    public static void printAthleteList() {
++        if (athleteList.size() == 0) {
+             System.out.println("There are no athletes registered yet.");
+         }
+ 
+@@ -92,7 +92,7 @@
+     /**
+      * Make new lift
+      */
+-    public static void makeNewLift(){
++    public static void makeNewLift() {
+         Scanner amountScanner = new Scanner(System.in);
+         System.out.println("Amount of snatch attempts allowed: \n");
+         int snatchAmount = amountScanner.nextInt();
+@@ -110,28 +110,28 @@
+         liftList.add(cleanAndJerk);
+ 
+         System.out.println("You made a new competition with " + snatchAmount +
+-            " attempts for the snatch and " + cleanAndJerkAmount +
+-            " attempts for the clean and jerk.");
++                " attempts for the snatch and " + cleanAndJerkAmount +
++                " attempts for the clean and jerk.");
+     }
+ 
+     /**
+      * Chance an attribute from an athlete
+      */
+-    public static void changeAthleteAttribute(){
++    public static void changeAthleteAttribute() {
+         System.out.println("Choose athlete to change the attribute of: \n");
+-        for (int i = 0; i < athleteList.size(); i++){
+-            System.out.println(i+1 + " - " + athleteList.get(i).getName());
++        for (int i = 0; i < athleteList.size(); i++) {
++            System.out.println(i + 1 + " - " + athleteList.get(i).getName());
+         }
+ 
+         Scanner athleteScanner = new Scanner(System.in);
+         int index = athleteScanner.nextInt();
+ 
+         System.out.println("""
+-            Choose attribute to change:
+-            1 - Name
+-            2 - Weight
+-            3 - league
+-            """);
++                Choose attribute to change:
++                1 - Name
++                2 - Weight
++                3 - league
++                """);
+ 
+         int choice = athleteScanner.nextInt();
+ 
+@@ -150,11 +150,11 @@
+             }
+             case 3 -> {
+                 System.out.println("""
+-                    Choose league
+-                    1 - Male
+-                    2 - Female
+-                    3 - Teen
+-                    """);
++                        Choose league
++                        1 - Male
++                        2 - Female
++                        3 - Teen
++                        """);
+                 int leagueOption = athleteScanner.nextInt();
+                 if (leagueOption == 1) {
+                     athleteList.get(index - 1).setLeague(League.MALE);
+@@ -171,16 +171,16 @@
+     /**
+      * Delete an athlete from the list
+      */
+-    public static void deleteAthleteRegistration(){
++    public static void deleteAthleteRegistration() {
+         System.out.println("Choose athlete to remove: \n");
+-        for (int i = 0; i < athleteList.size(); i++){
+-            System.out.println(i+1 + " - " + athleteList.get(i).getName());
++        for (int i = 0; i < athleteList.size(); i++) {
++            System.out.println(i + 1 + " - " + athleteList.get(i).getName());
+         }
+ 
+         Scanner athleteScanner = new Scanner(System.in);
+         int index = athleteScanner.nextInt();
+         System.out.println("Athlete " + athleteList.get(index - 1).getName() +
+-            " is deleted from the list. ");
++                " is deleted from the list. ");
+ 
+         athleteList.remove(athleteList.get(index - 1));
+     }
+@@ -188,13 +188,12 @@
+     /**
+      * Start competition method
+      * Initialize leaderboards
+-     *
+      */
+ 
+-    public static void startCompetition(){
++    public static void startCompetition() {
+ 
+         // Initialize leaderboards
+-        for (Lift lift: liftList) {
++        for (Lift lift : liftList) {
+             for (Athlete a : Competition.getAthleteList()) {
+                 if (a.getLeague() == League.MALE) {
+                     lift.getLeaderboardMale().add(a);
+@@ -207,61 +206,62 @@
+         }
+     }
+ 
+-    public static ArrayList<Athlete> makeOrderListSnatch(int round){
+-        ArrayList<Athlete> order = athleteList.stream().
+-            sorted(Athlete :: getAttemptListSnatch, );
+-        return order;
++    public static List<Athlete> orderAthletesByHighestSnatchForRound(int round) {
++        return athleteList.stream()
++                .sorted(Comparator.comparing(athlete -> athlete.getSnatchAttempts().getSuccessfulExecutionForRound(round)))
++                .collect(Collectors.toList());
+     }
+-
+-
+ 
+     /**
+      * Insert new attempt
++     *
+      * @param round round
+      */
+ 
+-    public static void insertAttemptSnatch(int round){
++    public static void insertAttemptSnatch(int round) {
+         Scanner attemptScanner = new Scanner(System.in);
+         System.out.println("Choose athlete to set attempt amount of \n");
+-        for (int i = 0; i < athleteList.size(); i++){
+-            System.out.println(i+1 + " - " + athleteList.get(i).getName());
++        for (int i = 0; i < athleteList.size(); i++) {
++            System.out.println(i + 1 + " - " + athleteList.get(i).getName());
+         }
+ 
+         System.out.println("Insert amount: \n");
+         double amount = attemptScanner.nextDouble();
+ 
+         int index = attemptScanner.nextInt();
+-        getAthleteList().get(index - 1).insertAttemptSnatch(amount, round);
++        getAthleteList().get(index - 1).addSnatchPlannedAttempt(round, amount);
+     }
+ 
+     /**
+      * Insert new attempt
++     *
+      * @param round round
+      */
+ 
+-    public static void insertAttemptCleanAndJerk(int round){
++    public static void insertAttemptCleanAndJerk(int round) {
+         Scanner attemptScanner = new Scanner(System.in);
+         System.out.println("Choose athlete to set attempt amount of \n");
+-        for (int i = 0; i < athleteList.size(); i++){
+-            System.out.println(i+1 + " - " + athleteList.get(i).getName());
++        for (int i = 0; i < athleteList.size(); i++) {
++            System.out.println(i + 1 + " - " + athleteList.get(i).getName());
+         }
+ 
+         System.out.println("Insert amount: \n");
+         double amount = attemptScanner.nextDouble();
+ 
+         int index = attemptScanner.nextInt();
+-        getAthleteList().get(index - 1).insertAttemptSnatch(amount, round);
++        getAthleteList().get(index - 1).addSnatchPlannedAttempt(round, amount);
+     }
+ 
+     /**
+      * Check if all attempts are filled in
++     *
+      * @param round round to be checked
+      * @return true or false
+      */
+ 
+-    public static boolean checkAttemptListSnatch(int round){
+-        for (Athlete athlete: athleteList){
+-            if (athlete.getAttemptListSnatch().get(round) == null){
++    public static boolean checkAttemptListSnatch(int round) {
++        for (Athlete athlete : athleteList) {
++            if (athlete.getSnatchAttempts().getAttemptList().get(round) == null) {
+                 return false;
+             }
+         }
+@@ -270,13 +270,14 @@
+ 
+     /**
+      * Check if all attempts are filled in
++     *
+      * @param round round to be checked
+      * @return true or false
+      */
+ 
+-    public static boolean checkAttemptListCleanAndJerk(int round){
+-        for (Athlete athlete: athleteList){
+-            if (athlete.getAttemptListCleanAndJerk().get(round) == null){
++    public static boolean checkAttemptListCleanAndJerk(int round) {
++        for (Athlete athlete : athleteList) {
++            if (athlete.getCleanAndJerkAttempts().getAttemptList().get(round) == null) {
+                 return false;
+             }
+         }
+@@ -284,12 +285,13 @@
+     }
+ 
+ 
+-    public static void saveToFile(){
++    public static void saveToFile() {
+ 
+     }
+ 
+     /**
+      * Get name
++     *
+      * @return name
+      */
+ 
+@@ -299,51 +301,57 @@
+ 
+     /**
+      * Get athlete list
++     *
+      * @return athlete list
+      */
+ 
+-    public static ArrayList<Athlete> getAthleteList() {
++    public static List<Athlete> getAthleteList() {
+         return athleteList;
+     }
+ 
+     /**
+      * Get leaderboard male
++     *
+      * @return leaderboard male
+      */
+ 
+-    public static ArrayList<Athlete> getLeaderboardMale() {
++    public static List<Athlete> getLeaderboardMale() {
+         return leaderboardMale;
+     }
+ 
+     /**
+      * Get leaderboard female
++     *
+      * @return leaderboard female
+      */
+ 
+-    public static ArrayList<Athlete> getLeaderboardFemale() {
++    public static List<Athlete> getLeaderboardFemale() {
+         return leaderboardFemale;
+     }
+ 
+     /**
+      * Get leaderboard teen
++     *
+      * @return leaderboard teen
+      */
+ 
+-    public static ArrayList<Athlete> getLeaderboardTeen() {
++    public static List<Athlete> getLeaderboardTeen() {
+         return leaderboardTeen;
+     }
+ 
+     /**
+      * Get list of lifts
++     *
+      * @return list of lifts
+      */
+ 
+-    public static ArrayList<Lift> getLiftList() {
++    public static List<Lift> getLiftList() {
+         return liftList;
+     }
+ 
+     /**
+      * Get snatch attempts
++     *
+      * @return amount of attempts for the snatch
+      */
+ 
+@@ -353,6 +361,7 @@
+ 
+     /**
+      * Get clean and jerk attempts
++     *
+      * @return amount of attempts for the clean and jerk
+      */
+ 
+@@ -362,6 +371,7 @@
+ 
+     /**
+      * Set name
++     *
+      * @param name new name
+      */
+ 
+@@ -371,6 +381,7 @@
+ 
+     /**
+      * Set athlete list
++     *
+      * @param athleteList new list
+      */
+ 
+Index: src/CompetitionTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/CompetitionTest.java b/src/CompetitionTest.java
+--- a/src/CompetitionTest.java	(revision 92682e5457c53f21f8393a1fe5114c86aa968021)
++++ b/src/CompetitionTest.java	(revision 9e05f53acca87d1ef486b05b2f67dcf65dca747f)
+@@ -1,6 +1,7 @@
+ import org.junit.jupiter.api.Test;
+ 
+ import java.util.ArrayList;
++import java.util.List;
+ 
+ import static org.junit.jupiter.api.Assertions.*;
+ 
+@@ -16,8 +17,8 @@
+ 
+         Competition.setAthleteList(list);
+ 
+-        athlete.insertAttemptSnatch(70, 1);
+-        athlete2.insertAttemptSnatch(75, 1);
++        athlete.addSnatchPlannedAttempt(1, 70);
++        athlete2.addSnatchPlannedAttempt(1, 75);
+         assertTrue(Competition.checkAttemptListSnatch(1));
+         Competition.getAthleteList().clear();
+     }
+@@ -33,7 +34,7 @@
+ 
+         Competition.setAthleteList(list);
+ 
+-        athlete2.insertAttemptSnatch(75, 1);
++        athlete2.addSnatchPlannedAttempt(1, 75);
+         assertFalse(Competition.checkAttemptListSnatch(1));
+         Competition.getAthleteList().clear();
+     }
+@@ -51,8 +52,8 @@
+ 
+         Competition.setAthleteList(list);
+ 
+-        athlete.insertAttemptSnatch(80, 1);
+-        athlete2.insertAttemptSnatch(75, 1);
++        athlete.addSnatchPlannedAttempt(1, 80);
++        athlete2.addSnatchPlannedAttempt(1, 75);
+         athlete3.initializeAttemptList(90, 1);
+ 
+         /*
+@@ -70,7 +71,7 @@
+         testOutput.add(athlete3);
+ 
+         // Calculated order
+-        ArrayList<Athlete> order = Competition.makeOrderListSnatch(1);
++        List<Athlete> order = Competition.orderAthletesByHighestSnatchForRound(1);
+ 
+         assertEquals(testOutput, order);
+         Competition.getAthleteList().clear();
+Index: src/Lift.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Lift.java b/src/Lift.java
+--- a/src/Lift.java	(revision 92682e5457c53f21f8393a1fe5114c86aa968021)
++++ b/src/Lift.java	(revision 9e05f53acca87d1ef486b05b2f67dcf65dca747f)
+@@ -8,14 +8,15 @@
+ public class Lift {
+     private String name;
+     private int attempts;
+-    private ArrayList<Athlete> leaderboardMale;
+-    private ArrayList<Athlete> leaderboardFemale;
+-    private ArrayList<Athlete> leaderboardTeen;
++    private List<Athlete> leaderboardMale;
++    private List<Athlete> leaderboardFemale;
++    private List<Athlete> leaderboardTeen;
+     private boolean snatch;
+ 
+     /**
+      * Constructor for a new lift
+-     * @param name name
++     *
++     * @param name     name
+      * @param attempts amount of attempts
+      */
+ 
+@@ -30,44 +31,34 @@
+      */
+ 
+     // TODO: Find a way to optimize this approach
+-
+-    public void sortLeaderboard(Enum<League> leagueEnum){
+-        ArrayList<Athlete> sorted = null;
++    public void sortLeaderboard(Enum<League> leagueEnum) {
++        List<Athlete> sorted;
+         if (snatch) {
+-            sorted =
+-                (ArrayList<Athlete>) Competition.getAthleteList().stream().
+-                    filter(athlete -> athlete.getLeague().equals(leagueEnum)).
+-                    sorted(Comparator.comparingDouble(Athlete::getHighestScoreSnatch)).collect(
+-                        Collectors.toList());
+-        }
+-
+-        else {
+-            sorted =
+-                (ArrayList<Athlete>) Competition.getAthleteList().stream().
+-                    filter(athlete -> athlete.getLeague().equals(leagueEnum)).
+-                    sorted(Comparator.comparingDouble(Athlete::getHighestScoreCleanAndJerk)).collect(
+-                        Collectors.toList());
++            sorted = Competition.getAthleteList().stream()
++                    .filter(athlete -> athlete.getLeague().equals(leagueEnum))
++                    .sorted(Comparator.comparingDouble(Athlete::getHighestScoreSnatch).reversed())
++                    .collect(Collectors.toList());
++        } else {
++            sorted = Competition.getAthleteList().stream()
++                    .filter(athlete -> athlete.getLeague().equals(leagueEnum))
++                    .sorted(Comparator.comparingDouble(Athlete::getHighestScoreCleanAndJerk).reversed())
++                    .collect(Collectors.toList());
+         }
+ 
+-        if (leagueEnum == League.MALE){
++        if (leagueEnum == League.MALE) {
+             leaderboardMale = sorted;
+-        }
+-
+-        else if (leagueEnum == League.FEMALE){
++        } else if (leagueEnum == League.FEMALE) {
+             leaderboardFemale = sorted;
+-        }
+-
+-        else {
++        } else {
+             leaderboardTeen = sorted;
+         }
+ 
+     }
+ 
+ 
+-
+-
+     /**
+      * Get name
++     *
+      * @return name
+      */
+ 
+@@ -77,6 +68,7 @@
+ 
+     /**
+      * Get amount of attempts
++     *
+      * @return amount of attempts
+      */
+ 
+@@ -86,28 +78,31 @@
+ 
+     /**
+      * Get leaderboard male
++     *
+      * @return leaderboard male
+      */
+ 
+-    public ArrayList<Athlete> getLeaderboardMale() {
++    public List<Athlete> getLeaderboardMale() {
+         return leaderboardMale;
+     }
+ 
+     /**
+      * Get leaderboard female
++     *
+      * @return leaderboard female
+      */
+ 
+-    public ArrayList<Athlete> getLeaderboardFemale() {
++    public List<Athlete> getLeaderboardFemale() {
+         return leaderboardFemale;
+     }
+ 
+     /**
+      * Get leaderboard teen
++     *
+      * @return leaderboard teen
+      */
+ 
+-    public ArrayList<Athlete> getLeaderboardTeen() {
++    public List<Athlete> getLeaderboardTeen() {
+         return leaderboardTeen;
+     }
+ }
+Index: src/LiftTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/LiftTest.java b/src/LiftTest.java
+--- a/src/LiftTest.java	(revision 92682e5457c53f21f8393a1fe5114c86aa968021)
++++ b/src/LiftTest.java	(revision 9e05f53acca87d1ef486b05b2f67dcf65dca747f)
+@@ -16,30 +16,23 @@
+ 
+         Lift clean = new Lift("Clean and Jerk", 3, false);
+ 
+-        athlete.setHighestScoreCleanAndJerk(50);
+-        athlete2.setHighestScoreCleanAndJerk(75);
+-        athlete3.setHighestScoreCleanAndJerk(80);
+-        athlete4.setHighestScoreCleanAndJerk(90);
+-        athlete5.setHighestScoreCleanAndJerk(100);
++        athlete.getCleanAndJerkAttempts().setHighestScore(50);
++        athlete2.getCleanAndJerkAttempts().setHighestScore(75);
++        athlete3.getCleanAndJerkAttempts().setHighestScore(80);
++        athlete4.getCleanAndJerkAttempts().setHighestScore(90);
++        athlete5.getCleanAndJerkAttempts().setHighestScore(100);
+ 
+         ArrayList<Athlete> list = new ArrayList<>();
+         list.add(athlete5);
+         list.add(athlete4);
+-        list.add(athlete3);
+         list.add(athlete2);
+         list.add(athlete);
+ 
+         Competition.setAthleteList(list);
+ 
+-        ArrayList<Athlete> test = new ArrayList<>();
+-        test.add(athlete);
+-        test.add(athlete2);
+-        test.add(athlete4);
+-        test.add(athlete5);
+         clean.sortLeaderboard(League.MALE);
+ 
+-
+-        assertEquals(test, clean.getLeaderboardMale());
++        assertEquals(list, clean.getLeaderboardMale());
+ 
+         Competition.getAthleteList().clear();
+ 
+Index: src/MyKey.java
+===================================================================
+diff --git a/src/MyKey.java b/src/MyKey.java
+deleted file mode 100644
+--- a/src/MyKey.java	(revision 92682e5457c53f21f8393a1fe5114c86aa968021)
++++ /dev/null	(revision 92682e5457c53f21f8393a1fe5114c86aa968021)
+@@ -1,76 +0,0 @@
+-import java.util.Map;
+-
+-public class MyKey<Double,Integer> implements Map.Entry {
+-    private final double amount;
+-    private int binary;
+-
+-
+-    public MyKey(double amount, int binary) {
+-        this.amount = amount;
+-        this.binary = binary;
+-
+-    }
+-
+-    /**
+-     * Returns the key corresponding to this entry.
+-     *
+-     * @return the key corresponding to this entry
+-     * @throws IllegalStateException implementations may, but are not
+-     *                               required to, throw this exception if the entry has been
+-     *                               removed from the backing map.
+-     */
+-    @Override
+-    public Object getKey() {
+-        return this.amount;
+-    }
+-
+-    /**
+-     * Returns the value corresponding to this entry.  If the mapping
+-     * has been removed from the backing map (by the iterator's
+-     * {@code remove} operation), the results of this call are undefined.
+-     *
+-     * @return the value corresponding to this entry
+-     * @throws IllegalStateException implementations may, but are not
+-     *                               required to, throw this exception if the entry has been
+-     *                               removed from the backing map.
+-     */
+-    @Override
+-    public Object getValue() {
+-        return this.binary;
+-    }
+-
+-    /**
+-     * Replaces the value corresponding to this entry with the specified
+-     * value (optional operation).  (Writes through to the map.)  The
+-     * behavior of this call is undefined if the mapping has already been
+-     * removed from the map (by the iterator's {@code remove} operation).
+-     *
+-     * @param value new value to be stored in this entry
+-     * @return old value corresponding to the entry
+-     * @throws UnsupportedOperationException if the {@code put} operation
+-     *                                       is not supported by the backing map
+-     * @throws ClassCastException            if the class of the specified value
+-     *                                       prevents it from being stored in the backing map
+-     * @throws NullPointerException          if the backing map does not permit
+-     *                                       null values, and the specified value is null
+-     * @throws IllegalArgumentException      if some property of this value
+-     *                                       prevents it from being stored in the backing map
+-     * @throws IllegalStateException         implementations may, but are not
+-     *                                       required to, throw this exception if the entry has been
+-     *                                       removed from the backing map.
+-     */
+-    @Override
+-    public Object setValue(Object value) {
+-        double old = this.binary;
+-        this.binary = (int) value;
+-        return old;
+-    }
+-
+-    @Override
+-    public String toString() {
+-        return "MyKey{" +
+-            "amount=" + amount +
+-            ", binary=" + binary +
+-            '}';
+-    }
+-}
+Index: src/MyKeyTest.java
+===================================================================
+diff --git a/src/MyKeyTest.java b/src/MyKeyTest.java
+deleted file mode 100644
+--- a/src/MyKeyTest.java	(revision 92682e5457c53f21f8393a1fe5114c86aa968021)
++++ /dev/null	(revision 92682e5457c53f21f8393a1fe5114c86aa968021)
+@@ -1,15 +0,0 @@
+-import org.junit.jupiter.api.Test;
+-
+-import static org.junit.jupiter.api.Assertions.*;
+-
+-class MyKeyTest {
+-
+-    @Test
+-    void setValue() {
+-        MyKey<Double, Integer> key = new MyKey<>(60, 0);
+-        key.setValue(1);
+-        MyKey<Double, Integer> test = new MyKey<>(60, 1);
+-
+-        assertEquals(test.toString(), key.toString());
+-    }
+-}
