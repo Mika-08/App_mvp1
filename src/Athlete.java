@@ -1,5 +1,3 @@
-import java.util.LinkedHashMap;
-
 public class Athlete {
     private String name;
     private double weight;
@@ -7,6 +5,8 @@ public class Athlete {
 
     private AttemptExecutions snatchAttempts = new AttemptExecutions();
     private AttemptExecutions cleanAndJerkAttempts = new AttemptExecutions();
+
+    private double sinclairTotal;
 
     /**
      * Constructor for a new athlete
@@ -53,7 +53,7 @@ public class Athlete {
     /**
      * Inset new attempts amount for clean and jerk
      *
-     * @param round   round in which it needs to be inserted
+     * @param round  round in which it needs to be inserted
      * @param weight amount
      */
     public void addCleanAndJerkPlannedAttempt(int round, double weight) {
@@ -67,7 +67,14 @@ public class Athlete {
      */
 
     public void validateSnatchExecution(int round, boolean isSuccessful) {
-        snatchAttempts.validateExecution(round, isSuccessful);
+        snatchAttempts.validateAttempt(round, isSuccessful);
+        if (isSuccessful){
+            System.out.println("The attempt was voted as successful!");
+        }
+        else {
+            System.out.println("The attempts was voted as failed...");
+        }
+
     }
 
     /**
@@ -77,7 +84,13 @@ public class Athlete {
      */
 
     public void validateCleanAndJerkExecution(int round, boolean isSuccessful) {
-        cleanAndJerkAttempts.validateExecution(round, isSuccessful);
+        cleanAndJerkAttempts.validateAttempt(round, isSuccessful);
+        if (isSuccessful){
+            System.out.println("The attempt was voted as successful!");
+        }
+        else {
+            System.out.println("The attempts was voted as failed...");
+        }
     }
 
 
@@ -86,6 +99,7 @@ public class Athlete {
      * @return sinclair total
      */
 
+    // TODO: Fix the calculation
     public double calculateSinclair(){
         double totalWeight = snatchAttempts.getHighestScore() + cleanAndJerkAttempts.getHighestScore();
         double womenCoefficientA = 0.783497476;
@@ -200,6 +214,8 @@ public class Athlete {
     public void setLeague(Enum<League> league) {
         this.league = league;
     }
+
+
 
 
     /**

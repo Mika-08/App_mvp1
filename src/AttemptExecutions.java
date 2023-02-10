@@ -17,7 +17,7 @@ public class AttemptExecutions {
      * @param round round
      * @param isSuccessful true or false
      */
-    public void validateExecution(int round, boolean isSuccessful) {
+    public void validateAttempt(int round, boolean isSuccessful) {
         Attempt attempt = attemptList.computeIfAbsent(round, integer -> {
             throw new IllegalStateException("No round was planned for '" + round + ";");
         });
@@ -35,13 +35,17 @@ public class AttemptExecutions {
      * @throws IllegalArgumentException when the attempt list has no value for a given round
      */
 
-    public double getSuccessfulExecutionForRound(int round) throws IllegalArgumentException{
+    public double getAttemptWeightForRound(int round) throws IllegalArgumentException{
         Attempt attempt = attemptList.computeIfAbsent(round, integer -> {
             throw new IllegalStateException("No round was planned for '" + round + ";");
         });
 
+        /*
         return Boolean.TRUE.equals(attempt.getIsSuccessful())
                 ? attempt.getWeight() :
                 0.0;
+
+         */
+        return attempt.getWeight();
     }
 }

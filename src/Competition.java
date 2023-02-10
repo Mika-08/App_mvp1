@@ -138,9 +138,10 @@ public class Competition {
         switch (choice) {
             case 1 -> {
                 System.out.println("Provide new name: \n");
-
+                String newName;
+                newName = athleteScanner.next();
                 // TODO: Make sure a name consisting of multiple words can be provided.
-                String newName = athleteScanner.next();
+
                 athleteList.get(index - 1).setName(newName);
             }
             case 2 -> {
@@ -190,6 +191,8 @@ public class Competition {
      * Initialize leaderboards
      */
 
+    // TODO: Finish this function
+
     public static void startCompetition() {
 
         // Initialize leaderboards
@@ -206,12 +209,77 @@ public class Competition {
         }
     }
 
+    /**
+     * Order the athletes by ascending attempt amounts
+     * @param round round
+     * @return ordered list
+     */
     public static List<Athlete> orderAthletesByHighestSnatchForRound(int round) {
+        /*
+        Athlete[] output = new Athlete[athleteList.size()];
+        for (int k = 0; k < athleteList.size(); k++){
+            output[k] = athleteList.get(k);
+        }
+        for(int i = 1; i < athleteList.size(); i++){
+            Athlete key = output[i];
+            int j = i-1;
+
+            System.out.println(output[j].getSnatchAttempts().getSuccessfulExecutionForRound(round));
+            System.out.println(key.getSnatchAttempts().getSuccessfulExecutionForRound(round));
+
+
+            while (j >= 0 && output[j].getSnatchAttempts().getSuccessfulExecutionForRound(round) >
+                key.getSnatchAttempts().getSuccessfulExecutionForRound(round)) {
+                output[j + 1] = output[j];
+                j = j - 1;
+            }
+            output[j + 1] = key;
+        }
+        return output
+*/
+
         return athleteList.stream()
                 .sorted(Comparator.comparing(athlete -> athlete.getSnatchAttempts()
-                    .getSuccessfulExecutionForRound(round)))
+                    .getAttemptWeightForRound(round)))
                 .collect(Collectors.toList());
     }
+
+    /**
+     * Order the athletes by ascending attempt amounts
+     * @param round round
+     * @return ordered list
+     */
+    public static List<Athlete> orderAthletesByHighestCleanAndJerkForRound(int round) {
+        /*
+        Athlete[] output = new Athlete[athleteList.size()];
+        for (int k = 0; k < athleteList.size(); k++){
+            output[k] = athleteList.get(k);
+        }
+        for(int i = 1; i < athleteList.size(); i++){
+            Athlete key = output[i];
+            int j = i-1;
+
+            System.out.println(output[j].getSnatchAttempts().getSuccessfulExecutionForRound(round));
+            System.out.println(key.getSnatchAttempts().getSuccessfulExecutionForRound(round));
+
+
+            while (j >= 0 && output[j].getSnatchAttempts().getSuccessfulExecutionForRound(round) >
+                key.getSnatchAttempts().getSuccessfulExecutionForRound(round)) {
+                output[j + 1] = output[j];
+                j = j - 1;
+            }
+            output[j + 1] = key;
+        }
+        return output
+*/
+
+        return athleteList.stream()
+            .sorted(Comparator.comparing(athlete -> athlete.getCleanAndJerkAttempts()
+                .getAttemptWeightForRound(round)))
+            .collect(Collectors.toList());
+    }
+
+
 
     /**
      * Insert new attempt
@@ -225,12 +293,15 @@ public class Competition {
         for (int i = 0; i < athleteList.size(); i++) {
             System.out.println(i + 1 + " - " + athleteList.get(i).getName());
         }
+        int index = attemptScanner.nextInt();
 
         System.out.println("Insert amount: \n");
         double amount = attemptScanner.nextDouble();
 
-        int index = attemptScanner.nextInt();
         getAthleteList().get(index - 1).addSnatchPlannedAttempt(round, amount);
+
+        System.out.println("The following attempt: " + amount +
+            "kg has been inserted for athlete " + getAthleteList().get(index-1).getName() + ".\n");
     }
 
     /**
@@ -263,8 +334,12 @@ public class Competition {
     public static boolean checkAttemptListSnatch(int round) {
         for (Athlete athlete : athleteList) {
             if (athlete.getSnatchAttempts().getAttemptList().get(round) == null) {
+              return false;
+            }
+            else if (athlete.getSnatchAttempts().getAttemptList().get(round).getWeight() == 0) {
                 return false;
             }
+
         }
         return true;
     }
@@ -281,10 +356,24 @@ public class Competition {
             if (athlete.getCleanAndJerkAttempts().getAttemptList().get(round) == null) {
                 return false;
             }
+            else if (athlete.getCleanAndJerkAttempts().
+                getAttemptList().get(round).getWeight() == 0){
+                return false;
+            }
+
         }
         return true;
     }
 
+    public static void makeLeaderBoard(Enum<League> leagueEnum){
+        for (int i = 0; i < getAthleteList().size(); i++){
+
+        }
+    }
+
+    /**
+     * Save to file
+     */
 
     public static void saveToFile() {
 
