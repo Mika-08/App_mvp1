@@ -101,6 +101,7 @@ class CompetitionTest {
     }
 
     @Test
+
     void testAmount(){
         Athlete athlete = new Athlete("Mike", 65, League.MALE);
         Athlete athlete3 = new Athlete("George", 65, League.MALE);
@@ -116,6 +117,38 @@ class CompetitionTest {
         assertEquals(20, Competition.getAthleteList().get(1).getSnatchAttempts().
             getAttemptList().get(1).getWeight());
 
+        Competition.getAthleteList().clear();
+    }
+
+    @Test
+    void testMakeLeaderBoards(){
+        Athlete athlete = new Athlete("Mike", 65, League.MALE);
+        Athlete athlete2 = new Athlete("Mark", 65, League.MALE);
+        Athlete athlete3 = new Athlete("George", 65, League.MALE);
+
+        ArrayList<Athlete> list = new ArrayList<>();
+        list.add(athlete);
+        list.add(athlete2);
+        list.add(athlete3);
+
+        athlete.getSnatchAttempts().setHighestScore(43);
+        athlete.getCleanAndJerkAttempts().setHighestScore(63);
+
+        athlete2.getSnatchAttempts().setHighestScore(30);
+        athlete2.getCleanAndJerkAttempts().setHighestScore(50);
+
+        athlete3.getSnatchAttempts().setHighestScore(60);
+        athlete3.getCleanAndJerkAttempts().setHighestScore(70);
+
+        ArrayList<Athlete> testOutput = new ArrayList<>();
+        testOutput.add(athlete3);
+        testOutput.add(athlete);
+        testOutput.add(athlete2);
+
+        Competition.setAthleteList(list);
+
+        Competition.makeLeaderBoard(League.MALE);
+        assertEquals(testOutput, Competition.getLeaderboardMale());
         Competition.getAthleteList().clear();
     }
 }

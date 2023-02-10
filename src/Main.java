@@ -178,8 +178,13 @@ public class Main {
             for (int l = 0; l < leaderboard.size(); l++){
                 System.out.println((l + 1)+": " + leaderboard.get(l).getName());
             }
-
         }
+
+        Competition.makeLeaderBoard(League.MALE);
+        for (int m = 0; m < Competition.getLeaderboardMale().size(); m++){
+            System.out.println((m + 1)+": " + Competition.getLeaderboardMale().get(m).getName());
+        }
+
 
 
     }

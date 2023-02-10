@@ -6,7 +6,7 @@ public class Athlete {
     private AttemptExecutions snatchAttempts = new AttemptExecutions();
     private AttemptExecutions cleanAndJerkAttempts = new AttemptExecutions();
 
-    private double sinclairTotal;
+    private double sinclairTotal = 0;
 
     /**
      * Constructor for a new athlete
@@ -99,7 +99,6 @@ public class Athlete {
      * @return sinclair total
      */
 
-    // TODO: Fix the calculation
     public double calculateSinclair(){
         double totalWeight = snatchAttempts.getHighestScore() + cleanAndJerkAttempts.getHighestScore();
         double womenCoefficientA = 0.783497476;
@@ -122,7 +121,7 @@ public class Athlete {
             sinclairTotal = totalWeight * Math.pow(10, womenCoefficientA *
                 Math.pow(Math.log(this.weight/womenCoefficientB)/Math.log(10),2));
         }
-
+        this.sinclairTotal = sinclairTotal;
         return sinclairTotal;
     }
 
@@ -185,8 +184,9 @@ public class Athlete {
      */
 
     public double getHighestScoreCleanAndJerk() {
-        return snatchAttempts.getHighestScore();
+        return cleanAndJerkAttempts.getHighestScore();
     }
+
 
     /**
      * Set name
@@ -204,7 +204,6 @@ public class Athlete {
         this.weight = weight;
     }
 
-    // TODO: Make these be changeable separately
 
     /**
      * Set league
@@ -215,8 +214,39 @@ public class Athlete {
         this.league = league;
     }
 
+    /**
+     * Get sinclair total
+     * @return sinclair total
+     */
+    public double getSinclairTotal() {
+        return sinclairTotal;
+    }
 
+    /**
+     * Set snatch attempts
+     * @param snatchAttempts new AttemptExecutions
+     */
 
+    public void setSnatchAttempts(AttemptExecutions snatchAttempts) {
+        this.snatchAttempts = snatchAttempts;
+    }
+
+    /**
+     * Set Clean and jerk attempts
+     * @param cleanAndJerkAttempts new AttemptExecutions
+     */
+
+    public void setCleanAndJerkAttempts(AttemptExecutions cleanAndJerkAttempts) {
+        this.cleanAndJerkAttempts = cleanAndJerkAttempts;
+    }
+
+    /**
+     * Set sinclair total
+     * @param sinclairTotal total
+     */
+    public void setSinclairTotal(double sinclairTotal) {
+        this.sinclairTotal = sinclairTotal;
+    }
 
     /**
      * To string method

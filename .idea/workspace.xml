@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8195f457-6257-4443-a552-5f9b6d63f904" name="Changes" comment="Hasan's changes along with some comments">
-      <change afterPath="$PROJECT_DIR$/src/AttemptExecutionsTest.java" afterDir="false" />
+    <list default="true" id="8195f457-6257-4443-a552-5f9b6d63f904" name="Changes" comment="Simulate competition">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Athlete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Athlete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AthleteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AthleteTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/AttemptExecutions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AttemptExecutions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Competition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Competition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CompetitionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CompetitionTest.java" afterDir="false" />
@@ -89,50 +89,52 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in App mvp1">
-    <configuration name="All in App mvp1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CompetitionTest.testMakeLeaderBoards">
+    <configuration name="AthleteTest.calculateSinclair" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="App mvp1" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CompetitionTest.testAmount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="App mvp1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CompetitionTest" />
-      <option name="METHOD_NAME" value="testAmount" />
+      <option name="MAIN_CLASS_NAME" value="AthleteTest" />
+      <option name="METHOD_NAME" value="calculateSinclair" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CompetitionTest.testAttemptListSnatch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AthleteTest.calculateSinclair4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="App mvp1" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CompetitionTest" />
-      <option name="METHOD_NAME" value="testAttemptListSnatch" />
+      <option name="MAIN_CLASS_NAME" value="AthleteTest" />
+      <option name="METHOD_NAME" value="calculateSinclair4" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CompetitionTest.testAttemptListSnatchTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AthleteTest.calculateTotalWeightLifted" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="App mvp1" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CompetitionTest" />
-      <option name="METHOD_NAME" value="testAttemptListSnatchTrue" />
+      <option name="MAIN_CLASS_NAME" value="AthleteTest" />
+      <option name="METHOD_NAME" value="calculateTotalWeightLifted" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LiftTest.sortLeaderboard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AthleteTest.getHighestCleanScore" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="App mvp1" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LiftTest" />
-      <option name="METHOD_NAME" value="sortLeaderboard" />
+      <option name="MAIN_CLASS_NAME" value="AthleteTest" />
+      <option name="METHOD_NAME" value="getHighestCleanScore" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CompetitionTest.testMakeLeaderBoards" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="App mvp1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CompetitionTest" />
+      <option name="METHOD_NAME" value="testMakeLeaderBoards" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LiftTest.sortLeaderboard" />
-        <item itemvalue="JUnit.All in App mvp1" />
-        <item itemvalue="JUnit.CompetitionTest.testAmount" />
-        <item itemvalue="JUnit.CompetitionTest.testAttemptListSnatchTrue" />
-        <item itemvalue="JUnit.CompetitionTest.testAttemptListSnatch" />
+        <item itemvalue="JUnit.CompetitionTest.testMakeLeaderBoards" />
+        <item itemvalue="JUnit.AthleteTest.calculateSinclair4" />
+        <item itemvalue="JUnit.AthleteTest.calculateTotalWeightLifted" />
+        <item itemvalue="JUnit.AthleteTest.calculateSinclair" />
+        <item itemvalue="JUnit.AthleteTest.getHighestCleanScore" />
       </list>
     </recent_temporary>
   </component>
@@ -178,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675718504007</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Simulate competition">
+      <created>1676043607168</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1676043607168</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -196,7 +205,8 @@
     <MESSAGE value="Version 1" />
     <MESSAGE value="Make order method update" />
     <MESSAGE value="Hasan's changes along with some comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hasan's changes along with some comments" />
+    <MESSAGE value="Simulate competition" />
+    <option name="LAST_COMMIT_MESSAGE" value="Simulate competition" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/App_mvp1$Main.ic" NAME="Main Coverage Results" MODIFIED="1675974851938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

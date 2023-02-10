@@ -250,29 +250,6 @@ public class Competition {
      * @return ordered list
      */
     public static List<Athlete> orderAthletesByHighestCleanAndJerkForRound(int round) {
-        /*
-        Athlete[] output = new Athlete[athleteList.size()];
-        for (int k = 0; k < athleteList.size(); k++){
-            output[k] = athleteList.get(k);
-        }
-        for(int i = 1; i < athleteList.size(); i++){
-            Athlete key = output[i];
-            int j = i-1;
-
-            System.out.println(output[j].getSnatchAttempts().getSuccessfulExecutionForRound(round));
-            System.out.println(key.getSnatchAttempts().getSuccessfulExecutionForRound(round));
-
-
-            while (j >= 0 && output[j].getSnatchAttempts().getSuccessfulExecutionForRound(round) >
-                key.getSnatchAttempts().getSuccessfulExecutionForRound(round)) {
-                output[j + 1] = output[j];
-                j = j - 1;
-            }
-            output[j + 1] = key;
-        }
-        return output
-*/
-
         return athleteList.stream()
             .sorted(Comparator.comparing(athlete -> athlete.getCleanAndJerkAttempts()
                 .getAttemptWeightForRound(round)))
@@ -317,11 +294,13 @@ public class Competition {
             System.out.println(i + 1 + " - " + athleteList.get(i).getName());
         }
 
+        int index = attemptScanner.nextInt();
         System.out.println("Insert amount: \n");
         double amount = attemptScanner.nextDouble();
 
-        int index = attemptScanner.nextInt();
         getAthleteList().get(index - 1).addSnatchPlannedAttempt(round, amount);
+        System.out.println("The following attempt: " + amount +
+            "kg has been inserted for athlete " + getAthleteList().get(index-1).getName() + ".\n");
     }
 
     /**
@@ -365,11 +344,31 @@ public class Competition {
         return true;
     }
 
+    /**
+     * Make overall leaderboard for each league based on the sinclair total
+     * @param leagueEnum league
+     */
+
     public static void makeLeaderBoard(Enum<League> leagueEnum){
         for (int i = 0; i < getAthleteList().size(); i++){
+            athleteList.get(i).calculateSinclair();
+        }
+        List<Athlete> sorted;
 
+        sorted = Competition.getAthleteList().stream()
+            .filter(athlete -> athlete.getLeague().equals(leagueEnum))
+            .sorted(Comparator.comparingDouble(Athlete::getSinclairTotal).reversed())
+            .collect(Collectors.toList());
+
+        if (leagueEnum == League.MALE) {
+            leaderboardMale = sorted;
+        } else if (leagueEnum == League.FEMALE) {
+            leaderboardFemale = sorted;
+        } else {
+            leaderboardTeen = sorted;
         }
     }
+
 
     /**
      * Save to file
