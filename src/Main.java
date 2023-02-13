@@ -110,11 +110,30 @@ public class Main {
         }
     }
 
+    /**
+     * Simulate competition
+     */
+
     public static void simulateCompetition(){
         System.out.println("""
             Welcome to your competition!
             First insert the chosen attempts.""");
 
+        runSnatch();
+        runCleanAndJerk();
+
+        Competition.makeLeaderBoard(League.MALE);
+        for (int m = 0; m < Competition.getLeaderboardMale().size(); m++){
+            System.out.println((m + 1)+": " + Competition.getLeaderboardMale().get(m).getName());
+        }
+
+    }
+
+    /**
+     * Simulate snatch
+     */
+
+    public static void runSnatch(){
         for (int i = 1; i <= Competition.getSnatchAttempts(); i++) {
             while (!Competition.checkAttemptListSnatch(i)) {
                 Competition.insertAttemptSnatch(i);
@@ -124,8 +143,8 @@ public class Main {
 
             for (int j = 0; j < Competition.getAthleteList().size(); j++){
                 System.out.println(Competition.getAthleteList().get(j).getName()
-                    + " will be lifting " + Competition.getAthleteList().get(j).
-                    getSnatchAttempts().getAttemptList().get(i).getWeight());
+                        + " will be lifting " + Competition.getAthleteList().get(j).
+                        getSnatchAttempts().getAttemptList().get(i).getWeight());
             }
 
             List<Athlete> order = Competition.orderAthletesByHighestSnatchForRound(i);
@@ -145,9 +164,14 @@ public class Main {
             for (int l = 0; l < leaderboard.size(); l++){
                 System.out.println((l + 1)+": " + leaderboard.get(l).getName());
             }
-
         }
+    }
 
+    /**
+     * Simulate clean and jerk
+     */
+
+    public static void runCleanAndJerk(){
         for (int i = 1; i <= Competition.getCleanAndJerkAttempts(); i++) {
             while (!Competition.checkAttemptListCleanAndJerk(i)) {
                 Competition.insertAttemptCleanAndJerk(i);
@@ -157,8 +181,8 @@ public class Main {
 
             for (int j = 0; j < Competition.getAthleteList().size(); j++){
                 System.out.println(Competition.getAthleteList().get(j).getName()
-                    + " will be lifting " + Competition.getAthleteList().get(j).
-                    getCleanAndJerkAttempts().getAttemptList().get(i).getWeight());
+                        + " will be lifting " + Competition.getAthleteList().get(j).
+                        getCleanAndJerkAttempts().getAttemptList().get(i).getWeight());
             }
 
             List<Athlete> order = Competition.orderAthletesByHighestCleanAndJerkForRound(i);
@@ -179,14 +203,6 @@ public class Main {
                 System.out.println((l + 1)+": " + leaderboard.get(l).getName());
             }
         }
-
-        Competition.makeLeaderBoard(League.MALE);
-        for (int m = 0; m < Competition.getLeaderboardMale().size(); m++){
-            System.out.println((m + 1)+": " + Competition.getLeaderboardMale().get(m).getName());
-        }
-
-
-
     }
 
 }

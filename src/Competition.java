@@ -125,7 +125,6 @@ public class Competition {
 
         Scanner athleteScanner = new Scanner(System.in);
         int index = athleteScanner.nextInt();
-
         System.out.println("""
                 Choose attribute to change:
                 1 - Name
@@ -186,6 +185,7 @@ public class Competition {
         athleteList.remove(athleteList.get(index - 1));
     }
 
+
     /**
      * Start competition method
      * Initialize leaderboards
@@ -193,6 +193,8 @@ public class Competition {
 
     // TODO: Finish this function
 
+
+    /*
     public static void startCompetition() {
 
         // Initialize leaderboards
@@ -208,6 +210,9 @@ public class Competition {
             }
         }
     }
+
+
+     */
 
     /**
      * Order the athletes by ascending attempt amounts
@@ -313,7 +318,7 @@ public class Competition {
     public static boolean checkAttemptListSnatch(int round) {
         for (Athlete athlete : athleteList) {
             if (athlete.getSnatchAttempts().getAttemptList().get(round) == null) {
-              return false;
+                return false;
             }
             else if (athlete.getSnatchAttempts().getAttemptList().get(round).getWeight() == 0) {
                 return false;

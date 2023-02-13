@@ -16,6 +16,7 @@ public class Lift {
      *
      * @param name     name
      * @param attempts amount of attempts
+     * @param snatch   if it is a snatch or not
      */
 
     public Lift(String name, int attempts, boolean snatch) {
@@ -26,6 +27,7 @@ public class Lift {
 
     /**
      * Sort the leaderboards based on the highest scores
+     * @param leagueEnum League
      */
 
     // TODO: Find a way to optimize this approach
@@ -39,7 +41,8 @@ public class Lift {
         } else {
             sorted = Competition.getAthleteList().stream()
                     .filter(athlete -> athlete.getLeague().equals(leagueEnum))
-                    .sorted(Comparator.comparingDouble(Athlete::getHighestScoreCleanAndJerk).reversed())
+                    .sorted(Comparator.comparingDouble(Athlete::getHighestScoreCleanAndJerk).
+                            reversed())
                     .collect(Collectors.toList());
         }
 

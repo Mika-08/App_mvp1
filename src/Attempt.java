@@ -11,3 +11,5 @@ public class Attempt {
     private final double weight;
     private Boolean isSuccessful;
 }
+
+

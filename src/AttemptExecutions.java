@@ -6,8 +6,13 @@ import java.util.Map;
 @Data
 public class AttemptExecutions {
     private Map<Integer, Attempt> attemptList = new LinkedHashMap<>();
-    double highestScore = 0.0;
+    private double highestScore = 0.0;
 
+    /**
+     * Add new attempt
+     * @param round round
+     * @param weight weight
+     */
     public void addPlan(int round, double weight) {
         attemptList.put(round, new Attempt(round, weight, null));
     }

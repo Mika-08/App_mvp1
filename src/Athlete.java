@@ -100,7 +100,8 @@ public class Athlete {
      */
 
     public double calculateSinclair(){
-        double totalWeight = snatchAttempts.getHighestScore() + cleanAndJerkAttempts.getHighestScore();
+        double totalWeight = snatchAttempts.getHighestScore() +
+                cleanAndJerkAttempts.getHighestScore();
         double womenCoefficientA = 0.783497476;
         double menCoefficientA = 0.751945030;
         double womenCoefficientB = 153.655;
