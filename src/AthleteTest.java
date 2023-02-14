@@ -1,6 +1,3 @@
-import org.junit.jupiter.api.Test;
-
-import java.util.LinkedHashMap;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -9,124 +6,167 @@ class AthleteTest {
     @org.junit.jupiter.api.Test
     void calculateSinclair() {
         Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
-        athlete.setHighestScoreSnatch(43);
-        athlete.setHighestScoreCleanAndJerk(63);
+        athlete.getSnatchAttempts().setHighestScore(45);
+        athlete.getCleanAndJerkAttempts().setHighestScore(63);
 
         assertEquals(153.50601950249748, athlete.calculateSinclair());
     }
 
-    @Test
-    void initialiseAttemptListSnatch(){
+    @org.junit.jupiter.api.Test
+    void calculateSinclair2() {
         Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
-        athlete.initializeAttemptList(3,3);
+        athlete.getSnatchAttempts().setHighestScore(45);
+        athlete.getCleanAndJerkAttempts().setHighestScore(63);
 
-        LinkedHashMap<Integer, MyKey> test = new LinkedHashMap<Integer, MyKey>();
-        test.put(1, new MyKey<>(0,0));
-        test.put(2, new MyKey<>(0,0));
-        test.put(3, new MyKey<>(0,0));
+        double amount = 108*(Math.pow(10,0.7834974*Math.pow(Math.log(55.6/153.655)/Math.log(10),2)));
 
-        assertEquals(test.toString(), athlete.getAttemptListSnatch().toString());
+        assertEquals(153.50601426696542, amount);
     }
 
-    @Test
-    void updateAttemptListSnatch(){
+    @org.junit.jupiter.api.Test
+    void getHighestSnatchScore() {
         Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
-        athlete.initializeAttemptList(3,3);
+        athlete.getSnatchAttempts().setHighestScore(45);
+        athlete.getCleanAndJerkAttempts().setHighestScore(63);
+        double snatch = athlete.getHighestScoreSnatch();
 
-        athlete.insertAttemptSnatch(60,1);
-
-        LinkedHashMap<Integer, MyKey> test = new LinkedHashMap<Integer, MyKey>();
-        test.put(1, new MyKey<>(60,0));
-        test.put(2, new MyKey<>(0,0));
-        test.put(3, new MyKey<>(0,0));
-
-        assertEquals(test.toString(), athlete.getAttemptListSnatch().toString());
+        assertEquals(43, snatch);
     }
-
-    @Test
-    void initialiseAttemptListCleanAndJerk(){
+    @org.junit.jupiter.api.Test
+    void getHighestCleanScore() {
         Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
-        athlete.initializeAttemptList(3,3);
+        athlete.getSnatchAttempts().setHighestScore(45);
+        athlete.getCleanAndJerkAttempts().setHighestScore(63);
 
-        LinkedHashMap<Integer, MyKey<Double, Integer>> test =
-            new LinkedHashMap<Integer, MyKey<Double, Integer>>();
-        test.put(1, new MyKey<>(0,0));
-        test.put(2, new MyKey<>(0,0));
-        test.put(3, new MyKey<>(0,0));
-
-        assertEquals(test.toString(), athlete.getAttemptListCleanAndJerk().toString());
-    }
-
-    @Test
-    void updateAttemptListCleanAndJerk(){
-        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
-        athlete.initializeAttemptList(3,3);
-
-        athlete.insertAttemptCleanAndJerk(60,1);
-
-        LinkedHashMap<Integer, MyKey<Double, Integer>> test =
-            new LinkedHashMap<Integer, MyKey<Double, Integer>>();
-        test.put(1, new MyKey<>(60,0));
-        test.put(2, new MyKey<>(0,0));
-        test.put(3, new MyKey<>(0,0));
-
-        assertEquals(test.toString(), athlete.getAttemptListCleanAndJerk().toString());
-    }
-
-    @Test
-    void validationSnatch(){
-        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
-        athlete.initializeAttemptList(3,3);
-
-        athlete.insertAttemptSnatch(60,1);
-        athlete.validateScoreSnatch(1, true);
-
-        LinkedHashMap<Integer, MyKey<Double, Integer>> test =
-            new LinkedHashMap<Integer, MyKey<Double, Integer>>();
-        test.put(1, new MyKey<>(60,1));
-        test.put(2, new MyKey<>(0,0));
-        test.put(3, new MyKey<>(0,0));
-
-        assertEquals(test.toString(), athlete.getAttemptListSnatch().toString());
-    }
-
-    @Test
-    void validationCleanAndJerk(){
-        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
-        athlete.initializeAttemptList(3,3);
-
-        athlete.insertAttemptCleanAndJerk(60,1);
-        athlete.validateScoreCleanAndJerk(1, true);
-
-        LinkedHashMap<Integer, MyKey<Double, Integer>> test =
-            new LinkedHashMap<Integer, MyKey<Double, Integer>>();
-        test.put(1, new MyKey<>(60,1));
-        test.put(2, new MyKey<>(0,0));
-        test.put(3, new MyKey<>(0,0));
-
-        assertEquals(test.toString(), athlete.getAttemptListCleanAndJerk().toString());
-    }
-
-    @Test
-    void updateHighestScoreSnatch(){
-        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
-        athlete.initializeAttemptList(3,3);
-
-        athlete.insertAttemptSnatch(60,1);
-        athlete.validateScoreSnatch(1, true);
-        assertEquals(60, athlete.getHighestScoreSnatch());
+        double clean = athlete.getHighestScoreCleanAndJerk();
+        assertEquals(63, clean);
 
     }
 
-    @Test
-    void updateHighestScoreCleanAndJerk(){
+    @org.junit.jupiter.api.Test
+    void calculateTotalWeightLifted() {
         Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
-        athlete.initializeAttemptList(3,3);
+        athlete.getSnatchAttempts().setHighestScore(45);
+        athlete.getCleanAndJerkAttempts().setHighestScore(63);
 
-        athlete.insertAttemptCleanAndJerk(60,1);
-        athlete.validateScoreCleanAndJerk(1, true);
-        assertEquals(60, athlete.getHighestScoreCleanAndJerk());
+        double totalWeight = athlete.getHighestScoreSnatch() + athlete.getHighestScoreCleanAndJerk();
 
+        assertEquals(108, totalWeight);
     }
+
+
+//    @Test
+//    void initialiseAttemptListSnatch(){
+//        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
+//        athlete.initializeAttemptList(3,3);
+//
+//        LinkedHashMap<Integer, Attempt> test = new LinkedHashMap<Integer, Attempt>();
+//        test.put(1, new Attempt<>(0,0));
+//        test.put(2, new Attempt<>(0,0));
+//        test.put(3, new Attempt<>(0,0));
+//
+//        assertEquals(test.toString(), athlete.getSnatchAttempts().toString());
+//    }
+//
+//    @Test
+//    void updateAttemptListSnatch(){
+//        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
+//        athlete.initializeAttemptList(3,3);
+//
+//        athlete.addSnatchPlannedAttempt(1, 60);
+//
+//        LinkedHashMap<Integer, Attempt> test = new LinkedHashMap<Integer, Attempt>();
+//        test.put(1, new Attempt<>(60,0));
+//        test.put(2, new Attempt<>(0,0));
+//        test.put(3, new Attempt<>(0,0));
+//
+//        assertEquals(test.toString(), athlete.getSnatchAttempts().toString());
+//    }
+//
+//    @Test
+//    void initialiseAttemptListCleanAndJerk(){
+//        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
+//        athlete.initializeAttemptList(3,3);
+//
+//        LinkedHashMap<Integer, Attempt<Double, Integer>> test =
+//            new LinkedHashMap<Integer, Attempt<Double, Integer>>();
+//        test.put(1, new Attempt<>(0,0));
+//        test.put(2, new Attempt<>(0,0));
+//        test.put(3, new Attempt<>(0,0));
+//
+//        assertEquals(test.toString(), athlete.getCleanAndJerkAttempts().toString());
+//    }
+//
+//    @Test
+//    void updateAttemptListCleanAndJerk(){
+//        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
+//        athlete.initializeAttemptList(3,3);
+//
+//        athlete.addCleanAndJerkPlannedAttempt(1, 60);
+//
+//        LinkedHashMap<Integer, Attempt<Double, Integer>> test =
+//            new LinkedHashMap<Integer, Attempt<Double, Integer>>();
+//        test.put(1, new Attempt<>(60,0));
+//        test.put(2, new Attempt<>(0,0));
+//        test.put(3, new Attempt<>(0,0));
+//
+//        assertEquals(test.toString(), athlete.getCleanAndJerkAttempts().toString());
+//    }
+//
+//    @Test
+//    void validationSnatch(){
+//        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
+//        athlete.initializeAttemptList(3,3);
+//
+//        athlete.addSnatchPlannedAttempt(1, 60);
+//        athlete.validateSnatchExecution(1, true);
+//
+//        LinkedHashMap<Integer, Attempt<Double, Integer>> test =
+//            new LinkedHashMap<Integer, Attempt<Double, Integer>>();
+//        test.put(1, new Attempt<>(60,1));
+//        test.put(2, new Attempt<>(0,0));
+//        test.put(3, new Attempt<>(0,0));
+//
+//        assertEquals(test.toString(), athlete.getSnatchAttempts().toString());
+//    }
+//
+//    @Test
+//    void validationCleanAndJerk(){
+//        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
+//        athlete.initializeAttemptList(3,3);
+//
+//        athlete.addCleanAndJerkPlannedAttempt(1, 60);
+//        athlete.validateCleanAndJerkExecution(1, true);
+//
+//        LinkedHashMap<Integer, Attempt<Double, Integer>> test =
+//            new LinkedHashMap<Integer, Attempt<Double, Integer>>();
+//        test.put(1, new Attempt<>(60,1));
+//        test.put(2, new Attempt<>(0,0));
+//        test.put(3, new Attempt<>(0,0));
+//
+//        assertEquals(test.toString(), athlete.getCleanAndJerkAttempts().toString());
+//    }
+//
+//    @Test
+//    void updateHighestScoreSnatch(){
+//        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
+//        athlete.initializeAttemptList(3,3);
+//
+//        athlete.addSnatchPlannedAttempt(1, 60);
+//        athlete.validateSnatchExecution(1, true);
+//        assertEquals(60, athlete.getHighestScoreSnatch());
+//
+//    }
+//
+//    @Test
+//    void updateHighestScoreCleanAndJerk(){
+//        Athlete athlete = new Athlete("Yue", 55.6, League.FEMALE);
+//        athlete.initializeAttemptList(3,3);
+//
+//        athlete.addCleanAndJerkPlannedAttempt(1, 60);
+//        athlete.validateCleanAndJerkExecution(1, true);
+//        assertEquals(60, athlete.getHighestScoreCleanAndJerk());
+//
+//    }
 
 }

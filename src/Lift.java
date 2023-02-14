@@ -1,22 +1,22 @@
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
+
 
 public class Lift {
     private String name;
     private int attempts;
-    private ArrayList<Athlete> leaderboardMale;
-    private ArrayList<Athlete> leaderboardFemale;
-    private ArrayList<Athlete> leaderboardTeen;
+    private List<Athlete> leaderboardMale;
+    private List<Athlete> leaderboardFemale;
+    private List<Athlete> leaderboardTeen;
     private boolean snatch;
 
     /**
      * Constructor for a new lift
-     * @param name name
+     *
+     * @param name     name
      * @param attempts amount of attempts
+     * @param snatch   if it is a snatch or not
      */
 
     public Lift(String name, int attempts, boolean snatch) {
@@ -27,47 +27,39 @@ public class Lift {
 
     /**
      * Sort the leaderboards based on the highest scores
+     * @param leagueEnum League
      */
 
     // TODO: Find a way to optimize this approach
-
-    public void sortLeaderboard(Enum<League> leagueEnum){
-        ArrayList<Athlete> sorted = null;
+    public void sortLeaderboard(Enum<League> leagueEnum) {
+        List<Athlete> sorted;
         if (snatch) {
-            sorted =
-                (ArrayList<Athlete>) Competition.getAthleteList().stream().
-                    filter(athlete -> athlete.getLeague().equals(leagueEnum)).
-                    sorted(Comparator.comparingDouble(Athlete::getHighestScoreSnatch)).collect(
-                        Collectors.toList());
+            sorted = Competition.getAthleteList().stream()
+                    .filter(athlete -> athlete.getLeague().equals(leagueEnum))
+                    .sorted(Comparator.comparingDouble(Athlete::getHighestScoreSnatch).reversed())
+                    .collect(Collectors.toList());
+        } else {
+            sorted = Competition.getAthleteList().stream()
+                    .filter(athlete -> athlete.getLeague().equals(leagueEnum))
+                    .sorted(Comparator.comparingDouble(Athlete::getHighestScoreCleanAndJerk).
+                            reversed())
+                    .collect(Collectors.toList());
         }
 
-        else {
-            sorted =
-                (ArrayList<Athlete>) Competition.getAthleteList().stream().
-                    filter(athlete -> athlete.getLeague().equals(leagueEnum)).
-                    sorted(Comparator.comparingDouble(Athlete::getHighestScoreCleanAndJerk)).collect(
-                        Collectors.toList());
-        }
-
-        if (leagueEnum == League.MALE){
+        if (leagueEnum == League.MALE) {
             leaderboardMale = sorted;
-        }
-
-        else if (leagueEnum == League.FEMALE){
+        } else if (leagueEnum == League.FEMALE) {
             leaderboardFemale = sorted;
-        }
-
-        else {
+        } else {
             leaderboardTeen = sorted;
         }
 
     }
 
 
-
-
     /**
      * Get name
+     *
      * @return name
      */
 
@@ -77,6 +69,7 @@ public class Lift {
 
     /**
      * Get amount of attempts
+     *
      * @return amount of attempts
      */
 
@@ -86,28 +79,31 @@ public class Lift {
 
     /**
      * Get leaderboard male
+     *
      * @return leaderboard male
      */
 
-    public ArrayList<Athlete> getLeaderboardMale() {
+    public List<Athlete> getLeaderboardMale() {
         return leaderboardMale;
     }
 
     /**
      * Get leaderboard female
+     *
      * @return leaderboard female
      */
 
-    public ArrayList<Athlete> getLeaderboardFemale() {
+    public List<Athlete> getLeaderboardFemale() {
         return leaderboardFemale;
     }
 
     /**
      * Get leaderboard teen
+     *
      * @return leaderboard teen
      */
 
-    public ArrayList<Athlete> getLeaderboardTeen() {
+    public List<Athlete> getLeaderboardTeen() {
         return leaderboardTeen;
     }
 }
